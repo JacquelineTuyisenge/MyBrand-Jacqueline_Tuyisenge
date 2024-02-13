@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+}
+header nav{
+display: flex;
+align-items: center;
+justify-content: space-around;
+background-color: #00274E;
+}
+nav .logo, nav .menu ul{
+    display: flex;
+}
+.menu ul li{
+    list-style: none;
+    margin: 0;
+}
+.menu ul li a{
+    text-decoration: none;
+    justify-content: space-between;
+    color: #fefeff;
+    padding: 15px;
+    font-size: 16px;
+}
+.menu ul li a::after,.signin a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transition: all 0.3s;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+.menu ul li a:hover::after, .signin a:hover::after {
+    transform: scaleX(1);
+}
+
+.menu ul li a:hover, .signin a:hover {
+    background-color: #55C4A1;
+}
+
+.logo{
+    align-items: center;
+    gap: 5px;
+    color: #fafafa;
+    padding: 10px;
+}
+.logo .logo-text a{
+    text-decoration: none;
+    color: #fafafa;
+}
+.logo .logo-letter a{
+    text-decoration: none;
+    color: #fafafa;
+}
+.logo .logo-letter{
+    justify-content: space-between;
+    color: #fafafa;
+    background-color: black;
+    padding: 10px;
+    border-radius: 50%;
+}
+.signin a{
+    text-decoration: none;
+    color: #f9fafa;
+    padding: 5px;
+}
+.hero{
+    padding-top: 100px;
+}
+.hero div.home{
+    padding: 10px 150px;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.text-button{
+    width:750px;
+    flex: 2;
+}
+.text-button .text-button-mini{
+    font-size: 20px;
+    font-weight: 600;
+}
+.text-button .text-button-sub{
+    font-size: 40px;
+    font-weight: 600;
+}
+.text-button .text-button-subb{
+    color: #55C4A1;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+}
+.text-button p{
+    color: #00274E;
+    font-size: 20px;
+    font-weight: 400;
+    text-align:left;
+}
+.profile-img{
+    width: 500px;
+    flex: 1;
+}
+.profile-img img{
+    width: 100%;
+    height: 100%;
+}
+.about-btn{
+    border: none;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    background-color: #55C4A1;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-top: 70px;
+}
+.about-btn a{
+    text-decoration: none;
+    border: none;
+    color: black;
+}
+.portfolio{
+    padding-top: 150px;
+}
+.portfolio div.projects{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 10px 150px;
+    width: 100%;
+    gap: 30%;
+    height: 100%;
+}
+.projects{
+    line-height: 24px;
+}
+.projects .portfolio-title{
+    font-size: 40px;
+    font-weight: 700;
+    color: #00274E;
+}
+.projects .portfolio-subtitle{
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    color: #000000;
+    padding: 60px 0px;
+}
+div.portfolio-cards{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0px;
+}
+.portfolio-view-btn{
+    padding: 10px 30px;
+    margin: 30px 0px;
+    border: none;
+    border-radius: 11px;
+    margin-top: 50px;
+    background-color: #55C4A1;
+}
+
+.portfolio-view-btn a{
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-weight: 600;
+}
+/* rem = given pixels / 16 pixels, by default on root() font-size: 16px */
