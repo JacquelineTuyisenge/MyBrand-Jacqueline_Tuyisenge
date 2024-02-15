@@ -17,8 +17,7 @@ nav .logo, nav .menu ul{
     display: flex;
 }
 .menu ul li{
-    list-style: none;
-    margin: 0;
+    list-style-type: none;
 }
 .menu ul li a{
     text-decoration: none;
@@ -126,11 +125,47 @@ nav .logo, nav .menu ul{
     padding: 10px 20px;
     margin-top: 70px;
 }
+.about-btn:hover{
+    transform: scale(1.03);
+}
 .about-btn a{
     text-decoration: none;
     border: none;
     color: black;
 }
+
+.about-me{
+    padding: 150px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .portfolio{
     padding-top: 150px;
 }
@@ -153,35 +188,351 @@ nav .logo, nav .menu ul{
     font-size: 40px;
     font-weight: 700;
     color: #00274E;
+    padding: 30px 0px;
 }
 .projects .portfolio-subtitle{
     font-size: 18px;
     font-weight: 300;
     text-align: center;
     color: #000000;
-    padding: 60px 0px;
+    padding: 20px 0px;
 }
 div.portfolio-cards{
     display: flex;
-    flex-wrap: nowrap;
-    gap: 10%;
+    flex-wrap: wrap;
+    gap: 3%;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 0px;
+    padding: 10px 0px;
+    width: 100%;
+}
+div.portfolio-cards .card{
+    background-color: #00274E;
+    color: white;
+    margin: 10px 0px;
+    border-radius: 10px;
+    width: 270px;
+}
+div.portfolio-cards .card:hover{
+    background-color: #55C4A1;
+    color:#00274E;
+    cursor: pointer;
+    transform: scale(1.03);
+}
+div.portfolio-cards .card a{
+    text-decoration: none;
+    color: #edf3f1;
+    padding: 10px;
+}
+div.portfolio-cards .card .card-image{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    background-size: cover;
+}
+div.portfolio-cards .card .card-image.card-1{
+    background-image: url('images/Rectangle\ 80.svg');
+    width: 100%;
+}
+div.portfolio-cards .card .card-image.card-2{
+    background-image: url('images/Rectangle\ 78.svg');
+    width: 100%;
+}
+div.portfolio-cards .card .card-image.card-3{
+    background-image: url('images/Rectangle\ 80\ \(1\).svg');
+    width: 100%;
+}
+div.portfolio-cards .card .card-image.card-4{
+    background-image: url('images/Rectangle\ 80\ \(2\).svg');
+    width: 100%;
 }
 .portfolio-view-btn{
-    padding: 10px 30px;
+    padding: 20px 30px;
     margin: 30px 0px;
     border: none;
     border-radius: 11px;
     margin-top: 50px;
+    background-color: #90dac3;
+}
+.portfolio-view-btn:hover{
     background-color: #55C4A1;
+    cursor: pointer;
+    transform: scale(1.03);
 }
 
 .portfolio-view-btn a{
     text-decoration: none;
     color: black;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
+}
+
+.services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+div.work-together{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #00274E;
+    color: white;
+    text-align: center;
+    padding: 50px 0px;
+}
+.work-together-title{
+    font-size: 40px;
+    font-weight: 700;
+    padding: 20px 0px;
+}
+.work-together-subtitle{
+    font-size: 16px;
+    padding: 15px 0px;
+    margin-top: 10px;
+}
+.work-together-btn{
+    padding: 10px 15px;
+    background-color: #55C4A1;
+    border: none;
+    border-radius: 4px;
+}
+.work-together-btn:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+.work-together-btn a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.work-details{
+    padding: 100px 0px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.work-details .what-i-do{
+    flex: 1;
+    margin: 20px;
+    padding: 20px;
+}
+.what-i-do h3{
+    padding: 20px 0px;
+    color:#00274E;
+}
+.what-i-do p{
+    padding: 20px 0px;
+    font-size: 16px;
+}
+.what-i-do button{
+    padding: 10px 15px;
+    background-color: #55C4A1;
+    border: none;
+    border-radius: 4px;
+}
+.what-i-do button a{
+    text-decoration: none;
+    color:#00274E;
+    font-size: 18px;
+}
+.what-i-do button:hover{
+    
+}
+.work-details .my-skills{
+    flex-direction: column;
+    align-items: center;
+    flex: 2;
+}
+.skill h3{
+    color: #00274E;
+    padding: 20px 0px;
+}
+.skill p{
+    font-size: 16px;
+    padding: 20px 0px;
+}
+.my-skills .skill{
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 5px 5px 3px #bec5cb;
+    border-radius: 10px;
+}
+.my-skills .skill:hover{
+    border-left: 5px solid #55C4A1;
+
+}
+.clients{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0px;
+}
+.clients h3{
+    color: #00274E;
+    padding: 20px 0px;
+}
+.clients small{
+    font-size: 15px;
+    padding: 20px 0px;
+}
+.client-images{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3%;
+    justify-content: space-between;
+    align-items: center;
+}
+.testimonials{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0px;
+}
+.testimonials h3{
+    color: #00274E;
+    padding: 20px 0px;
+}
+.testimonials h5{
+    padding: 20px 0px;
+}
+.testimonials p{
+    font-size: 13px;
+    padding: 10px 0px;
+}
+.testimonials-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3%;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact{
+    padding: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30%;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #e0e4e8;
+}
+.contact .my-adress{
+    flex: 1;
+    width: 35%;
+    text-align: center;
+    border: 3px solid #00274E;
+    border-radius: 10px;
+    padding: 15px;
+}
+.my-adress form{
+    width: 100%;
+}
+form h3{
+    color: #00274E;
+    padding: 20px 0px;
+}
+.my-adress form input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px;
+    border: 1px solid #00274E;
+    border-radius: 5px;
+}
+.contact .feedback{
+    flex: 2;
+    width: 60%;
+    text-align: center;
+    background-color: #00274E;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px 0px;
+}
+.contact .feedback h3{
+    color:#eef0f3;
+    padding: 40px 0px;
+}
+.contact .feedback label{
+    color: white;
+}
+.contact .feedback input, textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 10px;
+}
+.feedback button{
+    background-color: #55C4A1;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 10px;
+}
+.feedback button:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+}
+.feedback button a{
+    text-decoration: none;
+    color: #00274E;
+    font-size: 18px;
+}
+footer .copyright{
+    color: #e0e4e8;
+    font-size: 14px;
+}
+footer{
+    width: 100%;
+    background-color: #00274E;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0px;
+}
+footer .footer-logo{
+    display: flex;
+    align-items: center;
+}
+.footer-logo .logo-letter{
+    color: #fafbfb;
+    padding: 10px;
+    margin: 0px 10px;
+    background-color: #55C4A1;
+    border-radius: 20px;
+}
+.logo-letter a, .logo-text a{
+    text-decoration: none;
+    color: #fafbfb;
+}
+.footer-menu ul{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10%;
+}
+.footer-menu ul li{
+    list-style-type: none;
+}
+.footer-menu ul li a{
+    text-decoration: none;
+    color: #fafbfb;
+    font-size: 14px;
+}
+.footer-menu ul li a:hover{
+    color: #55C4A1;
+}
+footer .footer-signin a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+footer .footer-signin a:hover{
+    color: #55C4A1;
 }
 /* rem = given pixels / 16 pixels, by default on root() font-size: 16px */
