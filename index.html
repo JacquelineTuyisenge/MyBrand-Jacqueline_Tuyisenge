@@ -21,15 +21,21 @@
             <div class="menu">
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#blog">Blog</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
             <div class="signin">
-                <a href="#">Sign-In</a>
+                <a href="signin.html">Sign-In</a>
+            </div>
+            <div class="hamburger-icon">
+                <i class='bx bx-menu' id="hamburger"></i>
+            </div>
+            <div class="exit-icon">
+                <i class='bx bx-x' id="exit"></i>
             </div>
         </nav>
     </header>
@@ -49,7 +55,7 @@
                     </div>
                 </div>
             </section>
-            <section class="about-me">
+            <section class="about-me" id="about">
                 <!--about me  here-->
                 <div class="about-text">
                     <h3>About Me</h3>
@@ -160,7 +166,7 @@
                     <button class="hire-me-btn"><a href="#">Hire Me</a></button>
                 </div>
             </section>
-            <section class="portfolio">
+            <section class="portfolio" id="portfolio">
                 <div class="projects" id="portfolio">
                     <p class="portfolio-title">Portfolio</p>
                     <p class="portfolio-subtitle">Kindly explore my portfolio, where I showcase various projects that demonstrate my commitment to innovative problem-solving. Ranging from web development to intricate algorithm design, each project reflects my dedication to achieving excellence in software engineering.</p>
@@ -194,7 +200,7 @@
                 </div>
             </section>
             <!--blog page -->
-            <section class="blog-page">
+            <section class="blog-page" id="blog">
                 <div>
                     <h3>Blog Page</h3>
                 </div>
@@ -380,6 +386,25 @@
                     <p>Copyright &copy; 2024. Jacqueline.</p>
                 </div>
     </footer>
+
+    <script>
+        // js for resposive navbar
+            const hamburgerIcon = document.getElementById('hamburger');
+            const exitIcon = document.getElementById('exit');
+            const menu = document.querySelector('.menu');
+    
+            hamburgerIcon.addEventListener('click', () => {
+                menu.classList.toggle('show');
+                hamburgerIcon.style.display = 'none';
+                exitIcon.style.display = 'block';
+            });
+    
+            exitIcon.addEventListener('click', () => {
+                menu.classList.remove('show');
+                exitIcon.style.display = 'none';
+                hamburgerIcon.style.display = 'block';
+            });
+    </script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>
 </html>

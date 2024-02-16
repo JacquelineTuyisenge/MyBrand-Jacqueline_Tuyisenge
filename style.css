@@ -3,77 +3,98 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
-}
-header nav{
-display: flex;
-align-items: center;
-justify-content: space-around;
-background-color: #00274E;
-}
-nav .logo, nav .menu ul{
-    display: flex;
-}
-.menu ul li{
-    list-style-type: none;
-}
-.menu ul li a{
-    text-decoration: none;
-    justify-content: space-between;
-    color: #fefeff;
-    padding: 15px;
-    font-size: 16px;
-}
-.menu ul li a::after,.signin a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    transition: all 0.3s;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-}
-
-.menu ul li a:hover::after, .signin a:hover::after {
-    transform: scaleX(1);
-}
-
-.menu ul li a:hover, .signin a:hover {
-    background-color: #55C4A1;
-}
-
-.logo{
-    align-items: center;
-    gap: 5px;
-    color: #fafafa;
-    padding: 10px;
-}
-.logo .logo-text a{
-    text-decoration: none;
-    color: #fafafa;
-}
-.logo .logo-letter a{
-    text-decoration: none;
-    color: #fafafa;
-}
-.logo .logo-letter{
-    justify-content: space-between;
-    color: #fafafa;
-    background-color: black;
-    padding: 10px;
-    border-radius: 50%;
-}
-.signin a{
-    text-decoration: none;
-    color: #f9fafa;
-    padding: 5px;
-}
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    header {
+        background-color: #00274E;
+        color: white;
+        padding: 15px;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo-letter h3 {
+        margin: 0;
+        background-color:aquamarine;
+        color: white;
+        border-radius: 50%;
+        padding: 5px;
+        text-decoration: none;
+    }
+    .logo-letter h3 a{
+        text-decoration: none;
+        color:#00274E;
+        padding: 5px;
+    
+    }
+    
+    .logo-text {
+        margin-left: 10px;
+    }
+    
+    .menu {
+        display: flex;
+    }
+    
+    .menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    
+    .menu li {
+        margin-right: 20px;
+    }
+    
+    .menu li a {
+        color: white;
+        text-decoration: none;
+    }
+    .menu li a:hover{
+        color: aquamarine;
+    }
+    
+    .logo-text a {
+        text-decoration: none;
+        color: white;
+        background-color: transparent;
+        border-radius: 0;
+    }
+    
+    .signin a {
+        color: white;
+        text-decoration: none;
+        border: none;
+        border-radius: 0;
+        padding: 8px 15px;
+    }
+    
+    .hamburger-icon,
+    .exit-icon {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+    }
+    
+    /* css for main*/
+    
 .hero{
-    padding-top: 100px;
+    margin: 250px 0px;
 }
 .hero div.home{
     padding: 10px 150px;
@@ -747,10 +768,53 @@ img {
     color: #55C4A1;
     font-size: 20px;
 }
+ /* media queries */
+ @media screen and (max-width: 768px) {
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 150px;
+        background-color: #00274E;
+        border-radius: 0 0 5px 5px;
+    }
 
-@media screen and (max-width: 768px) {
+    .menu.show ul {
+        display: flex;
+    }
+
+    .menu li {
+        margin: 0;
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .hamburger-icon {
+        display: block;
+    }
+
+    .exit-icon {
+        display: block; 
+    }
+
+    .signin {
+        display: none; 
+    }
+
+    .menu.show .signin {
+        display: block; 
+    }
     .blog-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .menu ul {
+        width: 100%; 
     }
 }
 

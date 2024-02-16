@@ -39,9 +39,35 @@ nav {
 .logo-text {
     margin-left: 10px;
 }
+.search{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.search input{
+    padding: 5px 15px;
+    border: none;
+    font-size: 10px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: rgba(127, 255, 212, 0.455);
+    color:#f8fbfe;
+    resize: none;
+}
+.search button{
+    padding: 0px 10px;
+    border: none;
+    background-color: #00274E;
+}
+.search button i{
+    color:aquamarine;
+    font-size: 20px;
+    cursor: pointer;
+}
 
 .menu {
     display: flex;
+    align-items: center;
 }
 
 .menu ul {
@@ -53,6 +79,7 @@ nav {
 
 .menu li {
     margin-right: 20px;
+    align-items: center;
 }
 
 .menu li a {
@@ -82,7 +109,183 @@ nav {
     cursor: pointer;
     color: white;
 }
+/* blog page */
 
+.blog{
+    margin: 100px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.blog-title{
+    color: #00274E;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+.blog-authore-date{
+    color: #00274E;
+    font-size: 18px;
+    display: flex;
+    width: 100%;
+    gap: 70px;
+    justify-content: space-between;
+}
+.blog-image{
+    width: 100%;
+    margin: 10px 0px;
+}
+.blog-image img{
+    width: 100%;
+    border-radius: 10px;
+}
+.blog-content{
+    text-align: justify;
+    color: #00274E;
+    padding: 5px 0px;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 1.5px;
+}
+
+.comments{
+    margin: 100px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #00274E;
+    border-radius: 11px;
+}
+.comment-like{
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    color: white;
+}
+.comment-like p{
+    font-size: 16px;
+}
+.comment-like i{
+    cursor: pointer;
+    color: white;
+}
+.like-nbr{
+    display: flex;
+    align-items: center;
+}
+.see-comment-btn button{
+    padding: 10px 15px;
+    margin: 30px 0px;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 11px;
+}
+.see-comment-btn a{
+    text-decoration: none;
+    color:#00274E;
+    font-size: 16px;
+}
+.add-comment{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+.add-comment .commenter{
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    gap: 5px;
+}
+.add-comment .commenter img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.add-comment .commenter p{
+    font-size: 18px;
+}
+.comment-place textarea{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.492);
+    padding: 10px;
+    font-size: 18px;
+    resize: none;
+}
+.add-comment-btn button{
+    padding: 10px 15px;
+    margin: 10px 0px;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 11px;
+}
+.add-comment-btn button:hover, .see-comment-btn button:hover{
+    border-radius: 15px;
+    cursor: pointer;
+    transform: transition(2s ease-in-out);
+    /* transition: all 3s ease-in-out; */
+}
+.add-comment-btn button a{
+    text-decoration: none;
+    color:#00274E;
+    font-size: 16px;
+}
+.comment{
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px 0px;
+}
+hr{
+    width: 100%;
+    margin: 10px 0px;
+    color: rgba(255, 255, 255, 0.341)
+}
+.profile-comment{
+    display: flex;
+    align-items:center;
+    gap: 5px;
+}
+.profile-comment img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.comment-like-reply{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 20px;
+    padding-bottom:0;
+}
+.comment-like-reply i{
+    cursor: pointer;
+    font-size: 20px;
+    color: red;
+}
+.comment-like-reply i:last-child{
+    color:rgb(9, 138, 95);
+    font-size: 50px;
+}
+.reply p{
+    padding: 0px 70px;
+    font-size: 14px;
+}
 @media screen and (max-width: 800px) {
     .menu ul {
         display: none;
