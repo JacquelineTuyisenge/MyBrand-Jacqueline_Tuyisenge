@@ -7,18 +7,21 @@
         margin: 0;
         padding: 0;
         font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
     }
 
     /*header css*/
 
     header {
         background-color: #00274E;
+        width:auto;
         color: white;
         padding: 15px;
     }
     
     nav {
         display: flex;
+        width: 100%;
         justify-content: space-around;
         align-items: center;
     }
@@ -797,6 +800,12 @@ div.work-together{
 
  /* media queries */
  @media screen and (max-width: 767px) {
+    body{
+        width: 100%;
+    }
+    header{
+        width: auto;
+    }
     .menu ul {
         display: none;
         flex-direction: column;
