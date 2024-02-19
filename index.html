@@ -123,7 +123,7 @@
                     </div>
                     <div class="about-card-1">
                         <div class="title-education">
-                            <img src="images/education.svg" alt="education-image">
+                            <img src="images/collabolation.svg" alt="education-image">
                             <h3>collaborative Spirit</h3>
                         </div>
                         <div class="education-details">
@@ -132,7 +132,7 @@
                     </div>
                     <div class="about-card-1">
                         <div class="title-education">
-                            <img src="images/education.svg" alt="education-image">
+                            <img src="images/future.svg" alt="education-image">
                             <h3>Future Aspiration</h3>
                         </div>
                         <div class="education-details">
@@ -142,7 +142,7 @@
                     </div>
                     <div class="about-card-1">
                         <div class="title-education">
-                            <img src="images/education.svg" alt="education-image">
+                            <img src="images/continous learning.svg" alt="education-image">
                             <h3>Continous Learning</h3>
                         </div>
                         <div class="education-details">
@@ -151,15 +151,15 @@
                     </div>
                     <div class="about-card-socials">
                         <div class="title-connect">
-                            <img src="images/education.svg" alt="education-image">
+                            <img src="images/connect.svg" alt="education-image">
                             <h3>Connect With me</h3>
                         </div>
                             <div class="social-icons">
                                 <ul>
-                                    <li><a href="https://www.facebook.com/sagejacky.koala"><i class='bx bxl-facebook'></i></a></li>
-                                    <li><a href="https://www.instagram.com/jacky.sage?igsh=MTd6aGVmYjV6dTR4Yg=="><i class='bx bxl-instagram' ></i></a></li>
-                                    <li><a href="https://www.linkedin.com/in/tuyisenge-jacqueline-69b393240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class='bx bxl-linkedin-square' ></i></a></li>
-                                    <li><a href="https://github.com/JacquelineTuyisenge"><i class='bx bxl-github' ></i></a></li>
+                                    <li><a href="https://www.facebook.com/sagejacky.koala"><i class='bx bxl-facebook' id="facebook"></i></a></li>
+                                    <li><a href="https://www.instagram.com/jacky.sage?igsh=MTd6aGVmYjV6dTR4Yg=="><i class='bx bxl-instagram' id="instagram"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/in/tuyisenge-jacqueline-69b393240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class='bx bxl-linkedin-square' id="linkedin"></i></a></li>
+                                    <li><a href="https://github.com/JacquelineTuyisenge"><i class='bx bxl-github' id="github" ></i></a></li>
                                 </ul>
                             </div>
                     </div>
@@ -168,6 +168,7 @@
                     <button class="hire-me-btn"><a href="#">Hire Me</a></button>
                 </div>
             </section>
+            <!--portfolio section-->
             <section class="portfolio" id="portfolio">
                 <div class="projects" id="portfolio">
                     <p class="portfolio-title">Portfolio</p>
@@ -175,27 +176,27 @@
                     <div class="portfolio-cards">
                         <div class="card">
                             <div class="card-image card-1"></div>
-                            <small>Website</small>
-                            <h2>Title</h2>
-                            <a href="#">see more...</a>
-                        </div>
-                        <div class="card">
-                            <div class="card-image card-2"></div>
-                            <small>UX/UI Design</small>
-                            <h2>Title</h2>
-                            <a href="#">see more...</a>
+                            <div class="card-details">
+                                <small>Website</small>
+                                <h4>EmpowerLearn-Rwanda</h4>
+                                <a href="#">see more -></a>
+                            </div>
                         </div>
                         <div class="card">
                             <div class="card-image card-3"></div>
-                            <small>Web app</small>
-                            <h2>Title</h2>
-                            <a href="#">see more...</a>
+                            <div class="card-details">
+                                <small>Website</small>
+                                <h4>To-Do List</h4>
+                                <a href="#">see more -></a>
+                            </div>
                         </div>
                         <div class="card">
                             <div class="card-image card-4"></div>
-                            <small>UX Design</small>
-                            <h2>Title</h2>
-                            <a href="#">see more...</a>
+                            <div class="card-details">
+                                <small>UI/UX Design</small>
+                                <h4>CookBook</h4>
+                                <a href="#">see more -></a>
+                            </div>
                         </div>
                     </div>
                     <button class="portfolio-view-btn"><a href="#">View all Projects</a></button>
@@ -304,16 +305,20 @@
             <section class="contact" id="contact">
                 <div class="my-adress">
                     <h3>Contact Me</h3>
-                    <form>
-                        <label for="my Address"></label>
-                        <input type="text" id="my Address" placeholder="My Adress: Kigali/Rwanda">
-                        <br><br>
-                        <label for="my Email"></label>
-                        <input type="text" id="my Address" placeholder="My Email: tuyisengejacqi220@gmail.com">
-                        <br><br>
-                        <label for="telephone"></label>
-                        <input type="text" id="my Address" placeholder="Call me Now: +250 785 123 456">
-                    </form>
+                    <div class="my-infos">
+                        <div>
+                            <i class='bx bx-location-plus' id="location"></i>
+                            <p>Kigali/Rwanda</p>
+                        </div>
+                        <div>
+                            <i class='bx bx-envelope' id="email"></i>
+                            <p>q4qkZ@example.com</p>
+                        </div>
+                        <div>
+                            <i class='bx bx-phone' id="phone"></i>
+                            <p>+250 785 123 456</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="feedback">
                     <h3>Enter Message</h3>
@@ -335,27 +340,30 @@
     </main>
     <hr>
     <footer class="footer">
-                <div class="footer-logo">
-                    <div class="logo-letter">
-                        <h3><a href="#home">J</a></h3>
+                <div class="footer-container">
+                    <div class="footer-logo">
+                        <div class="logo-letter">
+                            <h3><a href="#home">J</a></h3>
+                        </div>
+                        <div class="logo-text">
+                            <h3><a href="#home">Jacqueline</a></h3>
+                        </div>
                     </div>
-                    <div class="logo-text">
-                        <h3><a href="#home">Jacqueline</a></h3>
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-signin">
+                        <a href="#">Sign-In</a>
                     </div>
                 </div>
-                <div class="footer-menu">
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-signin">
-                    <a href="#">Sign-In</a>
-                </div>
+                <hr>
                 <div class="copyright">
                     <p>Copyright &copy; 2024. Jacqueline.</p>
                 </div>

@@ -8,15 +8,22 @@
         padding: 0;
         font-family: Arial, sans-serif;
         background-color: #f4f4f4;
+        box-sizing: border-box;
+        /* overflow: hidden; */
     }
 
     /*header css*/
 
     header {
         background-color: #00274E;
-        width:auto;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 15px;
+        width: 100%;
+                /* width:auto;
         color: white;
         padding: 15px;
+        box-sizing: border-box; */
     }
     
     nav {
@@ -220,6 +227,10 @@
     border: 1px solid #55C4A1;
     border-radius: 10px;
 }
+.about-cards [class^="about-card-"]:hover {
+    border: 2px dashed #5560c4; /* Change border style on hover */
+    background-color: #55c4a13b; /* Add transparent background color on hover */
+}
 
 .about-card-1 h3, .about-card-2 h3{
     text-align: center;
@@ -310,6 +321,10 @@
     padding: 5px;
     margin: 10px;
 }
+.title-connect{
+    display: flex;
+    gap: 20px;
+}
 .about-card-socials{
     display: flex;
     flex-direction: column;
@@ -329,7 +344,23 @@
 }
 .social-icons ul li a i{
     color: #00274E;
-    font-size: 25px;
+    font-size: 35px;
+}
+#facebook{
+    color: #1877f2;
+}
+#instagram{
+    color: #ed0a56;
+}
+#linkedin{
+    color: #2158bf;
+}
+#github{
+    color: #24292e;
+}
+.social-icons ul li a i:hover{
+    transform: scale(1.4);
+    
 }
 .title-connect{
     display: flex;
@@ -363,7 +394,7 @@
     justify-content: space-between;
     padding: 10px 150px;
     width: 100%;
-    gap: 30%;
+    gap: 10%;
     height: 100%;
 }
 .projects{
@@ -376,27 +407,41 @@
     padding: 30px 0px;
 }
 .projects .portfolio-subtitle{
-    font-size: 18px;
-    font-weight: 300;
     text-align: center;
     color: #000000;
     padding: 20px 0px;
 }
+.projects .portfolio-subtitle p{
+    font-size: 18px;
+}
 div.portfolio-cards{
     display: flex;
     flex-wrap: wrap;
-    gap: 3%;
+    gap: 30px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 10px 0px;
     width: 100%;
 }
 div.portfolio-cards .card{
+    border: 2px solid #55C4A1;
     background-color: #00274E;
     color: white;
     margin: 10px 0px;
     border-radius: 10px;
-    width: 270px;
+    width: 280px;
+}
+.card .card-details{
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.card-details h4, .card-details a{
+    padding: 7px 0px;
+}
+.card-details small{
+    font-size: 10px;
 }
 div.portfolio-cards .card:hover{
     background-color: #55C4A1;
@@ -407,7 +452,10 @@ div.portfolio-cards .card:hover{
 div.portfolio-cards .card a{
     text-decoration: none;
     color: #edf3f1;
-    padding: 10px;
+}
+div.portfolio-cards .card a:hover{
+    color: #00274E;
+    font-weight: 700;
 }
 div.portfolio-cards .card .card-image{
     width: 100%;
@@ -419,16 +467,12 @@ div.portfolio-cards .card .card-image.card-1{
     background-image: url('images/Rectangle\ 80.svg');
     width: 100%;
 }
-div.portfolio-cards .card .card-image.card-2{
-    background-image: url('images/Rectangle\ 78.svg');
-    width: 100%;
-}
 div.portfolio-cards .card .card-image.card-3{
     background-image: url('images/Rectangle\ 80\ \(1\).svg');
     width: 100%;
 }
 div.portfolio-cards .card .card-image.card-4{
-    background-image: url('images/Rectangle\ 80\ \(2\).svg');
+    background-image: url('images/food.png');
     width: 100%;
 }
 .portfolio-view-btn{
@@ -535,7 +579,6 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
 }
 div.work-together{
     width: 100%;
@@ -575,7 +618,9 @@ div.work-together{
 }
 .work-details{
     padding: 100px 0px;
-    width: 100%;
+    width: 80%;
+    margin: 0px 50px;
+    gap: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -592,7 +637,7 @@ div.work-together{
 }
 .what-i-do p{
     padding: 20px 0px;
-    font-size: 16px;
+    font-size: 15px;
 }
 .what-i-do button{
     padding: 10px 15px;
@@ -611,15 +656,15 @@ div.work-together{
 .work-details .my-skills{
     flex-direction: column;
     align-items: center;
-    flex: 2;
+    flex: 1;
 }
 .skill h3{
     color: #00274E;
-    padding: 20px 0px;
+    padding: 10px 0px;
 }
 .skill p{
-    font-size: 16px;
-    padding: 20px 0px;
+    font-size: 13px;
+    padding: 7px 0px;
 }
 .my-skills .skill{
     margin: 10px;
@@ -644,27 +689,40 @@ div.work-together{
     align-items: center;
     background-color: #e0e4e8;
 }
-.contact .my-adress{
+
+.my-adress{
     flex: 1;
-    width: 35%;
+    border: 2px solid #00274E;
+    border-radius: 20px;
+    padding: 20px;
+}
+.my-adress h3{
     text-align: center;
-    border: 3px solid #00274E;
-    border-radius: 10px;
-    padding: 15px;
 }
-.my-adress form{
-    width: 100%;
-}
-form h3{
-    color: #00274E;
-    padding: 20px 0px;
-}
-.my-adress form input{
-    width: 100%;
+.my-infos div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
     padding: 10px;
-    margin: 10px 0px;
     border: 1px solid #00274E;
-    border-radius: 5px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.my-infos div p{
+    font-size: 13px;
+}
+.my-infos div:hover{
+    background-color: #00274e6c;
+    color: white;
+}
+#location{
+    color:#55C4A1;
+}
+#phone{
+    color:#55C4A1;
+}
+#email{
+    color:#55C4A1;
 }
 .contact .feedback{
     flex: 2;
@@ -709,7 +767,7 @@ form h3{
 /* footer */
 footer .copyright{
     color: #e0e4e8;
-    font-size: 14px;
+    font-size: 13px;
 }
 footer{
     width: 100%;
@@ -719,6 +777,12 @@ footer{
     align-items: center;
     padding: 20px 0px;
 }
+.footer-container{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-between;
+}
 footer .footer-logo{
     display: flex;
     align-items: center;
@@ -727,23 +791,26 @@ footer .footer-logo{
     color: #fafbfb;
     padding: 10px;
     margin: 0px 10px;
-    background-color: #55C4A1;
-    border-radius: 20px;
 }
 .logo-letter a, .logo-text a{
     text-decoration: none;
     color: #fafbfb;
 }
+/* .footer-menu{
+    padding: 0px, 70px;
+} */
 .footer-menu ul{
     display: flex;
     align-items: center;
-    flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 10%;
+    gap: 10px;
 }
 .footer-menu ul li{
     list-style-type: none;
+    align-items: center;
+    justify-content: center;
 }
 .footer-menu ul li a{
     text-decoration: none;
@@ -763,12 +830,14 @@ footer .footer-signin a:hover{
 }
 
  /* media queries */
- @media only screen and (max-width: 768px) {
+ @media screen and (max-width: 767px) {
     body{
         width: 100%;
+        overflow-x: hidden !important;
     }
     header{
-        width: auto;
+        width: 100%;
+        overflow-x: hidden !important;
     }
     .menu ul {
         display: none;
@@ -845,4 +914,131 @@ footer .footer-signin a:hover{
     .about-card-2{
         grid-column: 1/2;
     }
+    /* portfolio */
+    .portfolio div.projects{
+        padding: 50px;
+        display: block;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        gap: 10%;
+        height: 100%;
+    }
+    .projects .portfolio-title{
+        font-size: 30px;
+        font-weight: 700;
+        color: #00274E;
+    }
+    .projects .portfolio-subtitle{
+        text-align: center;
+        color: #000000;
+    }
+    .projects .portfolio-subtitle p{
+        font-size: 18px;
+    }
+    div.portfolio-cards{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        justify-content: center;
+        margin-right: 50px;
+        width: 500px;
+    }
+    div.portfolio-cards .card{
+        background-color: #00274E;
+        color: white;
+        align-items: center;
+        justify-self: center;
+        border-radius: 10px;
+        width: 90%;
+    }
+    /* contact us*/
+
+    .my-adress {
+        max-width: 100%; 
+        border-radius: 0; 
+    }
+
+    .my-adress form div {
+        width: 300px;
+        padding: 10px;
+        flex-direction: column; 
+    }
+
+    .my-adress form div p {
+        flex: none; 
+        width: 100%; 
+        font-size: 12px; 
+    }
+    
+    /* footer */
+    footer{
+        width: 100%;
+        background-color: #00274E;
+        display: block;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 20px 0px;
+    }
+    .footer-container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+
+    }
+    footer .footer-logo{
+        display: flex;
+        align-items: center;
+    }
+    .footer-logo .logo-letter{
+        color: #fafbfb;
+    }
+    .logo-letter a, .logo-text a{
+        text-decoration: none;
+        color: #fafbfb;
+    }
+    .footer-menu ul{
+        display: block;
+        align-items: center
+    }
+    
+    .footer-menu ul li{
+        padding: 5px 0px;
+        list-style-type: none;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-menu ul li a{
+        text-decoration: none;
+        color: #fafbfb;
+        font-size: 14px;
+    }
+    .footer-menu ul li a:hover{
+        color: #55C4A1;
+    }
+    footer .footer-signin a{
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+    }
+    footer .footer-signin a:hover{
+        color: #55C4A1;
+    }
+    footer .copyright{
+        color: #e0e4e8;
+        font-size: 13px;
+        text-align: center;
+        padding: 10px 0px;
+    }
+    
 }
+@media  screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Styles for screens between 768 and 1023 pixels wide (typically tablets) */
+  }
+  @media  screen and (min-width: 1024px) {
+    /* Styles for screens 1024 pixels wide and above (typically desktops) */
+  }
+    

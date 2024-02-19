@@ -1,123 +1,177 @@
-*{
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
     margin: 0;
     padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* Add your existing styles below */
+* {
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
 }
-body{
-    background-color: aquamarine;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-image: url("images/signin.jpg");
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'poppins', sans-serif;
+}
+
+.container {
+    background-image: url('images/signin-bg.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    gap: 15%;
+    align-items: center;
+    justify-content: center;
 }
-button{
+button.back{
+    margin-left: 10%;
+    padding: 7px 10px;
     border: none;
-    border-radius: 11px;
-    padding: 10px 15px;
-    margin: 30px 0px;
-    background-color: aquamarine;
+    border-radius: 10px;
+    background-color: #55C4A1;
+    color: #00274E;
 }
-button a{
+button.back a{
     text-decoration: none;
-    color:#00274E;
-    font-size: 20px;
+    color: #00274E;
+    font-size: 15px;
+    font-weight: 600;
 }
 .wrapper{
-    background-color: rgb(1, 52, 35);
-    opacity: 0.9;
-    border-radius: 15px;
-    width: 60%;
-    color: #fff;
-    padding: 30px;
+    border: none;
+    margin-right: 20%; 
+    padding: 1%;
 }
-
-.wrapper h1{
-    font-size: 36px;
-    text-align: center;
-    padding: 20px 0px;
-}
-
-.wrapper .input-box{
-    position: relative;
+form{
     width: 100%;
-    height: 50px;
-    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #55c4a14c;
+    border-radius: 30px;
+    background-color: #00274eb9;
+    padding: 25px;
+}
+form h1{
+    text-align: center;
+    color: white;
+    font-weight: 700;
+}
+form div.input-box{
+    font-family: 'poppins', sans-serif;
+    padding: 20px 0px;
+    color: white;
+    width: 100%;
+}
+.input-box label{
+    font-family: 'poppins', sans-serif;
+    font-size: 14px;
+    width: 100%;
+    padding: 7px 0px;
+    display: block;
 }
 .input-box input{
     width: 100%;
-    height: 100%;
-    margin: 10px 0;
-    background: transparent;
-    border: none;
+    border: 1px solid #ffffff51;
+    border-radius: 25px;
+    padding: 8px;
+    background-color: transparent;
+    color: white;
     outline: none;
-    border: 2px solid #00274E;
-    border-radius: 40px;
-    font-size: 16px;
-    color: #fff;
-    padding: 20px 45px 20px 20px;
 }
-.input-box input::placeholder{
-    color: #fff;
+.forgot-password{
+    align-self:flex-end;
 }
-.input-box i{
-    position: absolute;
-    right: 20px;
-    top: 90%;
-    transform: translateY(-50%);
-    font-size: 20px;
-    /* padding: 40px 0px; */
-}
-.wrapper .remember-forget{
-    display: flex;
-    justify-content: space-between;
-    font-size: 14.5px;
-    margin: -15px 0 15px;
-}
-
-.remember-forget label input{
-    accent-color: #00274E;
-    margin-right: 3px;
-}
-
-.remember-forget a{
-    color: #fff;
+.forgot-password a{
     text-decoration: none;
-}
-.remember-forget a:hover{
-    text-decoration: underline;
-}
-
-.wrapper .btn{
-    width: 100%;
-    margin: 30px 0;
-    height: 45px;
-    background: #00274E;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgb(1, 22, 54);
-    cursor: pointer;
-    font-size: 16px;
-    color: #fff;
+    color:#55C4A1;
+    font-size: 12px;
     font-weight: 600;
-    text-align: center;
 }
-.register-link p{
-    font-size: 14.5px;
-    text-align: center;
+button.btn{
+    width: 100%;
+    margin: 10px 0px;
+    background-color: #55C4A1;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 0px;
 }
-.register-link p a{
-    color:aquamarine;
+button.btn a{
+    font-size: 18px;
     text-decoration: none;
+    color: #00274E;
+    font-weight: 700;
 }
-.register-link p a:hover{
-    text-decoration: underline;
+.register-link{
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
+.register-link a{
+    text-decoration: none;
+    color: #55C4A1;
+    font-weight: 600;
+}
+
+/* Media query for screens with a max-width of 480px and below */
+@media (max-width: 480px) {
+    .container {
+        gap: 5%; /* Adjust the gap between items */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Align items to the start */
+    }
+
+    button.back {
+        margin-left: 0; /* Remove left margin for the back button */
+    }
+
+    .wrapper {
+        margin-right: 0; /* Remove right margin for the wrapper */
+    }
+
+    form {
+        padding: 15px; /* Adjust padding for the form */
+    }
+    
+    form div.input-box {
+        padding: 10px 0; /* Adjust padding for the input-box */
+    }
+    
+    .input-box label {
+        padding: 5px 0; /* Adjust padding for the labels */
+    }
+    
+    .input-box input {
+        padding: 5px; /* Adjust padding for the inputs */
+    }
+    
+    .forgot-password {
+        align-self: auto; /* Reset alignment for the forgot-password link */
+    }
+    
+    button.btn {
+        margin: 5px 0; /* Adjust margin for the button */
+    }
 }
