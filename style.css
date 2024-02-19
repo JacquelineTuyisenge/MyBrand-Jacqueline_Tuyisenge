@@ -429,7 +429,7 @@ div.portfolio-cards .card{
     color: white;
     margin: 10px 0px;
     border-radius: 10px;
-    width: 280px;
+    width: 200px;
 }
 .card .card-details{
     padding: 10px 20px;
@@ -892,6 +892,25 @@ footer .footer-signin a:hover{
     .profile-img{
         width: 80%;
         margin: 30px 50px;
+    }
+    /* hero */
+    .hero{
+        margin: 50px;
+    }
+    .hero div.home{
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-button{
+        width: 100%;
+        padding: 50px;
+    }
+    .profile-img{
+        width: 100%;
+        /* margin: 50px; */
+        padding: 50px;
     }
 
     /* about */
