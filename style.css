@@ -102,7 +102,40 @@
         cursor: pointer;
         color: white;
     }
+    /*sticky header*/
+    header.sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
     
+    /* Add this style to adjust the content spacing when the header becomes sticky */
+    .content {
+        padding-top: 80px; /* Adjust this value based on the height of your header */
+    }
+
+    .signin summary {
+        background-color: white;
+        padding: 8px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        /* Additional styling if needed */
+    }
+    
+    .signin a {
+        padding: 5px;
+        text-decoration: none;
+        color: #f1f3f6; /* or your preferred text color */
+    }
+    
+    .signin a:hover {
+        color: aquamarine; /* or your preferred hover color */
+    }
+
+
+
+
     /* css for main, hero section*/
     
 .hero{
@@ -870,9 +903,9 @@ footer .footer-signin a:hover{
         display: block; 
     }
 
-    .signin {
+    /* .signin {
         display: none; 
-    }
+    } */
 
     .menu.show .signin {
         display: block; 
