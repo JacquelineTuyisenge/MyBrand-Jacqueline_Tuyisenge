@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+    <link rel="stylesheet" href="articles.css">
+    <!-- Place the first <script> tag in your HTML's <head> -->
+    <script src="https://cdn.tiny.cloud/1/dgwaal64l9kyd0fif7whgfgmxfoae6cl3vwja5gucnuho2ri/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="logo">
+                <details>
+                    <summary><img src="images/profile-dashbord.svg" alt="logo-image"></summary>
+                    <a href="profile.html">View profile</a>
+                </details>
+                <h3>Jacqueline T.</h3>
+            </nav>
+        </header>
+        <div class="container">
+            <div class="sidebar">
+                <div class="sidebar-menu">
+                    <ul>
+                        <li> <a href="dashboard.html"><img src="images/dasbboard.svg" alt="dashboard icon"><span>Dashboard</span></a></li>
+                        <li> <a href="articles.html"><img src="images/articlee.svg" alt="article-icon"><span>Articles</span></a></li>
+                        <li> <a href="messages.html"><img src="images/message.svg" alt="message-icon"><span>Messages</span></a></li>
+                        <li> <img src="images/logout.svg" alt="logout-icon"><a href="index.html"><span>Logout</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <form>
+                    <label for="title">Title</label>
+                    <input type="text" id="title" required>
+                    <br><br>
+                    <label for="imageInput">Select an image:</label>
+                    <input type="file" id="imageInput" name="imageInput" accept="image/*" required>
+                    <small id="imageError" style="color: red;"></small>
+                    <br>
+                    <button type="submit">Upload Image</button>
+                    <div class="blog-description">
+                        <label for="myTextarea">Description</label>
+                        <textarea id="myTextarea" name="myTextarea" cols="30" rows="5"></textarea>
+                        <br>
+                        <button type="submit">Submit</button>
+                        <button type="button">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    <!-- Place the following <script> and <textarea> tags your HTML's <body> -->
+        <script>
+        tinymce.init({
+            selector: '#myTextarea',
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage advtemplate ai mentions tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+            tinycomments_mode: 'embedded',
+            tinycomments_author: 'Author name',
+            mergetags_list: [
+            { value: 'First.Name', title: 'First Name' },
+            { value: 'Email', title: 'Email' },
+            ],
+            ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
+        });
+        </script>
+        
+    </body>
+</html>

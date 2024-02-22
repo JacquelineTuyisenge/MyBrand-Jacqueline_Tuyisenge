@@ -1,3 +1,5 @@
+/* blog.css */
+/* messages.css */
 
 /* Reset some default browser styles */
 body, h1, h2, h3, p, ul, li {
@@ -86,7 +88,6 @@ header {
     cursor: pointer;
 }
 
-/* Content Styles */
 .content {
     flex-grow: 1;
     padding: 20px;
@@ -101,33 +102,59 @@ header {
     color: #00274E;
 }
 
-.content-main {
-    display: flex;
-    flex-wrap: wrap;
+.message-list {
+    display: block;
+    gap:0px;
 }
 
-.card {
-    background-color:#00274E;
-    padding: 50px;
-    margin: 10px;
-    box-sizing: border-box;
+.message-card {
+    background-color: #fff;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    min-width: 250px; /* Adjust as needed */
 }
 
-.card h3 {
-    color: #f3f6fa;
-    font-size: 20px;
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-.card p{
-    color: #f3f6fa;
-    font-size: 16px;
-    font-weight: 600;
+.message-column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    gap: 10px;
 }
 
-/* Responsive styles */
+.header-1 {
+    background-color: #00274E;
+    color: white;
+}
+
+.see-more-btn {
+    justify-self:right;
+    background-color:#55C4A1;
+    color:#f1f3f5;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.see-more-btn a{
+    text-decoration: none;
+}
+.see-more-btn a:hover{
+    color: white;
+}
+
+.see-more-btn:hover {
+    background-color: #004080;
+    color: white;
+}
+.message-title{
+    width: 20%;
+}
+.message-description{
+    width: 30%;
+}
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -164,4 +191,31 @@ header {
     .sidebar a img{
         margin-right: 0;
     }
+}
+
+/* ... (previous styles) */
+
+.message-image {
+    width: 140px;
+    height: 70px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.message-action {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+    transform: scale(1.04);
+    rotate: 10deg;
 }
