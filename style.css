@@ -779,6 +779,12 @@ div.work-together{
     margin: 10px 0px;
     border-radius: 10px;
 }
+
+form input[type="text"],
+input[type="email"],
+textarea {
+  color: black;
+}
 .feedback button{
     background-color: #55C4A1;
     border: none;
@@ -795,6 +801,12 @@ div.work-together{
     text-decoration: none;
     color: #00274E;
     font-size: 18px;
+}
+
+/*error for contact form*/
+.contact-error{
+    padding: 10px;
+    color: red;
 }
 
 /* footer */

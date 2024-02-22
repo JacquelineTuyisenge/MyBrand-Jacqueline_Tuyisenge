@@ -328,17 +328,18 @@
                 </div>
                 <div class="feedback">
                     <h3>Enter Message</h3>
-                    <form>
+                    <div id="error" class="contact-error"></div>
+                    <form id="contact-form" action="/" method="GET">
                         <label for="name">Name:</label>
-                        <input type="text" id="name" required>
+                        <input type="text" id="name" name="name">
                         <br><br>
                         <label for="email">Email:</label>
-                        <input type="email" id="email" required>
+                        <input type="email" id="email" name="email">
                         <br><br>
                         <label for="Message">Message:</label>
-                        <textarea type="text" id="name" cols="30" rows="10" required></textarea>
+                        <textarea type="text" id="message" name="message" cols="30" rows="10" required></textarea>
                         <br><br>
-                        <button class="feedback-btn"><a href="#">Submit</a></button>
+                        <button type="submit" class="feedback-btn"><a href="#">Submit</a></button>
                     </form>
                 </div>
             </section>
