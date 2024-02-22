@@ -134,6 +134,12 @@ button.btn a{
     color: #55C4A1;
     font-weight: 600;
 }
+/* register error*/
+
+.register-error{
+    padding: 10px;
+    color: red;
+}
 
 /* Media query for screens with a max-width of 480px and below */
 @media (max-width: 480px) {
