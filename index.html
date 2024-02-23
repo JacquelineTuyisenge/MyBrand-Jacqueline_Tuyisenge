@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jacqueline-Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -33,7 +34,7 @@
                     <details>
                         <summary>Sign-In</summary>
                         <a href="signin.html">as User</a>
-                        <a href="signin.html">as Admin</a>
+                        <a href="admin.html">as Admin</a>
                     </details>
                 <!-- </a> -->
             </div>
@@ -174,6 +175,7 @@
                     <button class="hire-me-btn"><a href="#">Hire Me</a></button>
                 </div>
             </section>
+
             <!--portfolio section-->
             <section class="portfolio" id="portfolio">
                 <div class="projects" id="portfolio">
@@ -208,6 +210,7 @@
                     <button class="portfolio-view-btn"><a href="#">View all Projects</a></button>
                 </div>
             </section>
+
             <!--blog page -->
             <section class="blog-page" id="blog">
                 <div>
@@ -375,26 +378,8 @@
                     <p>Copyright &copy; 2024. Jacqueline.</p>
                 </div>
     </footer>
-
-    <script>
-        // js for resposive navbar
-            const hamburgerIcon = document.getElementById('hamburger');
-            const exitIcon = document.getElementById('exit');
-            const menu = document.querySelector('.menu');
-    
-            hamburgerIcon.addEventListener('click', () => {
-                menu.classList.toggle('show');
-                hamburgerIcon.style.display = 'none';
-                exitIcon.style.display = 'block';
-            });
-    
-            exitIcon.addEventListener('click', () => {
-                menu.classList.remove('show');
-                exitIcon.style.display = 'none';
-                hamburgerIcon.style.display = 'block';
-            });
-    </script>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>
 </html>

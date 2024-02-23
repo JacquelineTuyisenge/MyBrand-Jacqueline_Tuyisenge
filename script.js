@@ -10,6 +10,33 @@ window.onscroll = function() {
     }
 };
 
+// js for resposive navbar
+  const hamburgerIcon = document.getElementById('hamburger');
+  const exitIcon = document.getElementById('exit');
+  const menu = document.querySelector('.menu');
+
+  hamburgerIcon.addEventListener('click', () => {
+      menu.classList.toggle('show');
+      hamburgerIcon.style.display = 'none';
+      exitIcon.style.display = 'block';
+  });
+
+  exitIcon.addEventListener('click', () => {
+      menu.classList.remove('show');
+      exitIcon.style.display = 'none';
+      hamburgerIcon.style.display = 'block';
+  });
+
+
+//initializing swiper for blog cards
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     const swiper = new Swiper('.swiper-container', {
+//         slidesPerView: 1,
+//         spaceBetween: 10,
+//     });
+// });
+
 // contact form validation
 
 const name = document.getElementById('name');

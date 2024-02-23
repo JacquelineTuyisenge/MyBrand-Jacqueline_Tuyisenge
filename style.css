@@ -557,10 +557,23 @@ div.portfolio-cards .card .card-image.card-4{
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 20px;
     padding: 20px;
-    justify-content: center; /* Center the grid horizontally */
-    align-items: center; /* Center the grid vertically */
-    margin: 0 10%; /* Center the grid container within its parent */
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 10%;
 }
+
+/* swiper  */
+
+/* .swiper-container {
+    width: 100%;
+    padding: 20px;
+}
+
+.swiper-slide {
+    width: 100%;
+    box-sizing: border-box;
+} */
+
 .blog-card {
     background-color: #00274E;
     text-decoration: none;
@@ -1017,6 +1030,17 @@ footer .footer-signin a:hover{
         border-radius: 10px;
         width: 90%;
     }
+
+    /* blog */
+
+    /* .swiper-container {
+        padding: 10px;
+        width: 100%;
+    }
+    .swiper-slide {
+        padding: 20px;
+        width: 100px;
+    } */
     /* contact us*/
 
     .my-adress {

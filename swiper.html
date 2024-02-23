@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper Test</title>
+    <!-- Add these in the <head> section of your HTML -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px; /* Add some margin to the body */
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .blog-page {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .swiper-container {
+            width: 100%;
+            margin: 20px auto; /* Center the Swiper container */
+        }
+
+        .swiper-slide {
+            background-color: #00274E;
+            color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-sizing: border-box;
+            max-width: 500px;
+            margin: 0 auto; /* Center the slides */
+        }
+
+        .swiper-pagination {
+            width: 100%;
+            position: absolute;
+            bottom: -30px; /* Move pagination below the slides */
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #55C4A1;
+            font-size: 24px;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .swiper-button-next {
+            right: 0;
+        }
+
+        .swiper-button-prev {
+            left: 0;
+        }
+
+        .pagination {
+            margin-top: 20px;
+        }
+
+        @media (max-width: 767px) {
+            /* Styles for small screens */
+            .swiper-slide {
+                max-width: 100%; /* Full width for small screens */
+                margin: 20px auto; /* Center the slides on small screens */
+            }
+
+            .swiper-pagination {
+                bottom: -50px; /* Adjust pagination position for small screens */
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                font-size: 18px; /* Adjust font size for small screens */
+                width: 30px; /* Adjust button size for small screens */
+                height: 30px;
+            }
+        }
+    </style>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <section class="blog-page" id="blog">
+        <div>
+            <h3>Blog Page</h3>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Your blog cards here -->
+                <div class="swiper-slide">
+                    <h4>Blog Post 1</h4>
+                    <p>Content of the blog post goes here...</p>
+                </div>
+                <div class="swiper-slide">
+                    <h4>Blog Post 2</h4>
+                    <p>Content of the blog post goes here...</p>
+                </div>
+                <div class="swiper-slide">
+                    <h4>Blog Post 3</h4>
+                    <p>Content of the blog post goes here...</p>
+                </div>
+                <!-- Repeat for other blog cards -->
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var mySwiper = new Swiper('.swiper-container', {
+                slidesPerView: 3, /* Show 3 slides on larger screens */
+                spaceBetween: 20,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    767: {
+                        slidesPerView: 1, /* Show 1 slide on small screens */
+                    },
+                },
+            });
+        });
+    </script>
+</body>
+</html>
