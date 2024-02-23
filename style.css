@@ -545,11 +545,22 @@ div.portfolio-cards .card .card-image.card-4{
     padding: 38px 0px;
     font-size: 20px;
 }
+.pagination button{
+    border: none;
+    background-color:#55C4A1;
+    padding: 10px;
+    border-radius: 12px;
+}
+.pagination button:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
 .pagination a{
     text-decoration: none;
-    color:#55C4A1;
+    padding: 10px;
+    color:#00274E;
+    font-size: 18px;
     font-weight: 600;
-    padding: 0px 10px;
 }
 
 .blog-cards {
