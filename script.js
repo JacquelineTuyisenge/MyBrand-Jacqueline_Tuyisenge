@@ -28,15 +28,6 @@ window.onscroll = function() {
   });
 
 
-//initializing swiper for blog cards
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     const swiper = new Swiper('.swiper-container', {
-//         slidesPerView: 1,
-//         spaceBetween: 10,
-//     });
-// });
-
 // contact form validation
 
 const name = document.getElementById('name');

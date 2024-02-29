@@ -1,4 +1,4 @@
-<!-- messages.html -->
+<!-- blog.html -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Messages</title>
+    <title>Blog-List</title>
     <link rel="stylesheet" href="blog.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -32,69 +32,45 @@
             </div>
         </div>
 
-        <div class="content">
-            <div class="content-header">
-                <h1>Blog List</h1>
-            </div>
-            <div class="message-list">
-                <!-- Sample Message -->
-                <div class="message-card header-1">
-                    <div class="message-column">
-                        <h3>Image</h3>
-                        <h3>Title</h3>
-                        <h3>Description</h3>
-                        <h3>Action</h3>
-                    </div>
-                </div>
-                <div class="message-card">
-                    <div class="message-column">
-                        <img src="images/passion.svg" alt="Sample Image" class="message-image">
-                        <p class="message-title">Passion Led Us Here</p>
-                        <p class="message-description">Becoming a software engineer has never been easier than now. All it takes is a passion, and adaptability.</p>
-                        <div class="message-action">
-                            <button class="edit-btn"><box-icon name='edit'></box-icon></button>
-                            <button class="delete-btn"><box-icon name='trash'></box-icon></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="message-card">
-                    <div class="message-column">
-                        <img src="images/passion.svg" alt="Sample Image" class="message-image">
-                        <p class="message-title">Passion Led Us Here</p>
-                        <p class="message-description">Becoming a software engineer has never been easier than now. All it takes is a passion, and adaptability.</p>
-                        <div class="message-action">
-                            <button class="edit-btn"><box-icon name='edit'></box-icon></button>
-                            <button class="delete-btn"><box-icon name='trash'></box-icon></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="message-card">
-                    <div class="message-column">
-                        <img src="images/passion.svg" alt="Sample Image" class="message-image">
-                        <p class="message-title">Passion Led Us Here</p>
-                        <p class="message-description">Becoming a software engineer has never been easier than now. All it takes is a passion, and adaptability.</p>
-                        <div class="message-action">
-                            <button class="edit-btn"><box-icon name='edit'></box-icon></button>
-                            <button class="delete-btn"><box-icon name='trash'></box-icon></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="message-card">
-                    <div class="message-column">
-                        <img src="images/passion.svg" alt="Sample Image" class="message-image">
-                        <p class="message-title">Passion Led Us Here</p>
-                        <p class="message-description">Becoming a software engineer has never been easier than now. All it takes is a passion, and adaptability.</p>
-                        <div class="message-action">
-                            <button class="edit-btn"><box-icon name='edit'></box-icon></button>
-                            <button class="delete-btn"><box-icon name='trash'></box-icon></button>
-                        </div>
-                    </div>
-                </div>
+        <!--blog-list table-->
+        <table class="blog-table">
+            <thead>
+                <tr class="header-1">
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="blogTableBody">
+                <!-- where added blogs will be displayed -->
+                <tr>
+                    <td><img src="images/passion.svg" alt="Sample Image" class="message-image"></td>
+                    <td class="message-title">Passion Led Us Here</td>
+                    <td class="message-description">Becoming a software engineer has never been easier than now. All it takes is a passion, and adaptability.</td>
+                    <td class="message-action">
+                        <button class="edit-btn"><box-icon name='edit'></box-icon></button>
+                        <button class="delete-btn" onclick="deleteBlog(0)"><box-icon name='trash'></box-icon></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="images/passion.svg" alt="Sample Image" class="message-image"></td>
+                    <td class="message-title">Passion Led Us Here</td>
+                    <td class="message-description">Becoming a software engineer has never been easier than now. All it takes is a passion, and adaptability.</td>
+                    <td class="message-action">
+                        <button class="edit-btn" onclick="updateData()"><box-icon name='edit'></box-icon></button>
+                        <button class="delete-btn" onclick="deleteBlog(0)"><box-icon name='trash'></box-icon></button>
+                    </td>
+                </tr>
+               
                 <!-- Repeat similar structure for other messages -->
-            </div>
-            <button class="see-more-btn"><a href="articles.html">+ Blog</a></button>
-        </div>
+            </tbody>
+        </table>
+    </div>
+    <div class="addBlog-btn">
+        <button class="see-more-btn"><a href="articles.html">+ Blog</a></button>
     </div>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- <script src="articles.js"></script> -->
 </body>
 </html>

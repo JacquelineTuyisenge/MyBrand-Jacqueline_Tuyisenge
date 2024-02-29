@@ -9,7 +9,7 @@
         font-family: Arial, sans-serif;
         background-color: #f4f4f4;
         box-sizing: border-box;
-        /* overflow: hidden; */
+        overflow-x: hidden;
     }
 
     /*header css*/
@@ -573,18 +573,6 @@ div.portfolio-cards .card .card-image.card-4{
     margin: 0 10%;
 }
 
-/* swiper  */
-
-/* .swiper-container {
-    width: 100%;
-    padding: 20px;
-}
-
-.swiper-slide {
-    width: 100%;
-    box-sizing: border-box;
-} */
-
 .blog-card {
     background-color: #00274E;
     text-decoration: none;
@@ -939,29 +927,10 @@ footer .footer-signin a:hover{
         display: block; 
     }
 
-    /* .signin {
-        display: none; 
-    } */
-
     .menu.show .signin {
         display: block; 
     }
 
-
-    .hero div.home{
-        padding: 10px 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .text-button{
-        width: 100%;
-        margin: 50px;
-    }
-    .profile-img{
-        width: 80%;
-        margin: 30px 50px;
-    }
     /* hero */
     .hero{
         margin: 50px;
@@ -1042,16 +1011,6 @@ footer .footer-signin a:hover{
         width: 90%;
     }
 
-    /* blog */
-
-    /* .swiper-container {
-        padding: 10px;
-        width: 100%;
-    }
-    .swiper-slide {
-        padding: 20px;
-        width: 100px;
-    } */
     /* contact us*/
 
     .my-adress {

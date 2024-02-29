@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    /*header css*/
+
+    header {
+        background-color: #00274E;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 15px;
+        width: 100%;
+                /* width:auto;
+        color: white;
+        padding: 15px;
+        box-sizing: border-box; */
+    }
+    
+    nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo-letter h3 {
+        margin: 0;
+        background-color:aquamarine;
+        color: white;
+        border-radius: 50%;
+        padding: 5px;
+        text-decoration: none;
+    }
+    .logo-letter h3 a{
+        text-decoration: none;
+        color:#00274E;
+        padding: 5px;
+    
+    }
+    
+    .logo-text {
+        margin-left: 10px;
+    }
+    
+    .menu {
+        display: flex;
+    }
+    
+    .menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    
+    .menu li {
+        margin-right: 20px;
+    }
+    
+    .menu li a {
+        color: white;
+        text-decoration: none;
+    }
+    .menu li a:hover{
+        color: aquamarine;
+    }
+    
+    .logo-text a {
+        text-decoration: none;
+        color: white;
+        background-color: transparent;
+        border-radius: 0;
+    }
+    
+    .signin a {
+        color: white;
+        text-decoration: none;
+        border: none;
+        border-radius: 0;
+        padding: 8px 15px;
+    }
+    
+    .hamburger-icon,
+    .exit-icon {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+    }
+    /*sticky header*/
+    header.sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    
+    /* Add this style to adjust the content spacing when the header becomes sticky */
+    .content {
+        padding-top: 80px; /* Adjust this value based on the height of your header */
+    }
+
+    .signin summary {
+        background-color: white;
+        padding: 8px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        /* Additional styling if needed */
+    }
+    
+    .signin a {
+        padding: 5px;
+        text-decoration: none;
+        color: #f1f3f6; /* or your preferred text color */
+    }
+    
+    .signin a:hover {
+        color: aquamarine; /* or your preferred hover color */
+    }
+
+    /*blog page*/
+
+.blog-page{
+    padding: 70px 0px;
+}
+.blog-page h3{
+    text-align: center;
+    padding: 38px 0px;
+    color:#00274E;
+    font-size: 40px;
+}
+.blog-page .pagination{
+    text-align: center;
+    padding: 38px 0px;
+    font-size: 20px;
+}
+.pagination button{
+    border: none;
+    background-color:#55C4A1;
+    padding: 10px;
+    border-radius: 12px;
+}
+.pagination button:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+.pagination a{
+    text-decoration: none;
+    padding: 10px;
+    color:#00274E;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.blog-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 10%;
+}
+
+.blog-card {
+    background-color: #00274E;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+.blog-card:hover {
+    transform: scale(1.05);
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.blog-card h4 {
+    margin: 10px 0;
+    color: white;
+}
+
+.blog-card p{
+    padding: 10px 0px;
+    color: white;
+    font-size: 14px;
+    font-weight: 100;
+}
+.blog-card div.date-like-comments{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.date-like-comments .like, .date-like-comments .comments{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-around;
+}
+.date-like-comments i{
+    color: #55C4A1;
+    font-size: 20px;
+}
+
+
+
+ /* media queries */
+ @media screen and (max-width: 767px) {
+    body{
+        width: 100%;
+        overflow-x: hidden !important;
+    }
+    header{
+        width: 100%;
+        overflow-x: hidden !important;
+    }
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        /* width: 150px; */
+        width: 50%;
+        background-color: #00274E;
+        border-radius: 15px;
+    }
+
+    .menu.show ul {
+        display: flex;
+    }
+
+    .menu li {
+        margin: 0;
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .hamburger-icon {
+        display: block;
+    }
+
+    .exit-icon {
+        display: block; 
+    }
+
+    .menu.show .signin {
+        display: block; 
+    }
+
+
+    /*blogs*/
+ }
