@@ -151,7 +151,7 @@ window.onscroll = function() {
         blogsContainer.innerHTML = `${
             getAllArticles.map((item, index) => {
                 return `
-                <a href="blog-post-1.html" class="blog-card">
+                <a href="single-blog.html?title=${encodeURIComponent(item.blogTitle)}" class="blog-card">
                     <img src="${item.blogImage}" alt="Blog-image">
                     <h4>${item.blogTitle}</h4>
                     <div class="date-like-comments">
