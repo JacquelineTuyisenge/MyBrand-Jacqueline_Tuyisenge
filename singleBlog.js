@@ -78,7 +78,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // function to handle comments in
 
+// function to handle comments
 function addComment() {
+    // Fetch the blog title from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const blogTitle = urlParams.get('title');
+
     // form validation
     let errorMessage = document.getElementById('error');
     let commentText = document.getElementById('commentText').value;
@@ -110,24 +115,35 @@ function addComment() {
                 <p>0</p>
                 <i class='bx bxs-heart'></i>
                 <p>Reply</p>
-                <i class='bx bx-down-arrow-alt' ></i>
+                <i class='bx bx-down-arrow-alt'></i>
             </div>
             <div class="reply">
                 <p>Asante Pia</p>
             </div>
         `;
 
-        // Append the new comment after the 'add-comment' element
+        // Append the new comment to the comment section
         const commentSection = document.getElementById('commentsSection');
+        commentSection.appendChild(newComment);
+
+        // Insert the new comment after the 'add-comment' element
         commentSection.insertBefore(newComment, commentSection.children[2]);
 
         // clear the comment text
         document.getElementById('commentText').value = "";
 
         // store the comments in local storage
-        const storedComments = JSON.parse(localStorage.getItem('comments')) || [];
-        storedComments.unshift({ commenter: 'Amie', text: commentText }); // Add the new comment to the beginning
+        const storedComments = JSON.parse(localStorage.getItem('comments')) || {};
+
+        // Retrieve comments for the current blog post or create an empty array
+        const blogComments = storedComments[blogTitle] || [];
+
+        // Add the new comment to the comments for the current blog post
+        blogComments.push({ commenter: 'Amie', text: commentText });
+
+        // Update the stored comments with the new comments for the current blog post
+        storedComments[blogTitle] = blogComments;
+
         localStorage.setItem('comments', JSON.stringify(storedComments));
     }
 }
-
