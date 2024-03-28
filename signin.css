@@ -24,6 +24,8 @@ time, mark, audio, video {
 * {
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 body, html {
@@ -39,15 +41,16 @@ body, html {
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
-    gap: 15%;
+    flex-wrap: wrap;
+    gap: 15px;
     align-items: center;
     justify-content: center;
 }
 button.back{
-    margin-left: 10%;
-    padding: 7px 10px;
+    margin: 30px;
+    padding: 15px;
     border: none;
     border-radius: 10px;
     background-color: #55C4A1;
@@ -60,9 +63,10 @@ button.back a{
     font-weight: 600;
 }
 .wrapper{
+    width: 400px;
     border: none;
-    margin-right: 20%; 
-    padding: 1%;
+    margin: 20px; 
+    padding: 15px
 }
 form{
     width: 100%;
@@ -134,50 +138,118 @@ button.btn a{
     color: #55C4A1;
     font-weight: 600;
 }
-/* register error*/
+
 
 .register-error{
     padding: 10px;
     color: red;
 }
 
-/* Media query for screens with a max-width of 480px and below */
-@media (max-width: 480px) {
+/*loader*/
+
+.loader {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .loader:before , .loader:after{
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+    inset: 0;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3) inset;
+  }
+  .loader:after {
+    box-shadow: 0 5px 0 #048b73 inset;
+    animation: rotate 2s linear infinite;
+  }
+  
+  @keyframes rotate {
+    0% {  transform: rotate(0)}
+    100% { transform: rotate(360deg)}
+  }
+
+/*popup*/
+
+/* Your existing CSS code */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #000;
+  z-index: 1000;
+  transition: opacity 0.5s;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+
+@media screen and (max-width: 320px) {
+    * {
+        box-sizing: border-box;
+        font-family: 'poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'poppins', sans-serif;
+        overflow-x: hidden;
+    }
     .container {
-        gap: 5%; /* Adjust the gap between items */
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Align items to the start */
+        gap: 5px;
+        display: flex;
+        padding: 0 2%;
+        flex-direction: column; 
+        align-items: center; 
     }
 
     button.back {
-        margin-left: 0; /* Remove left margin for the back button */
+        margin-left: 0; 
     }
 
-    .wrapper {
-        margin-right: 0; /* Remove right margin for the wrapper */
+    .wrapper{
+        width: 300px;
+        border: none;
+        margin: 50px; 
+        padding: 10px;
+        overflow-x: none;
+        justify-content: center;
+        align-items: center;
     }
 
     form {
-        padding: 15px; /* Adjust padding for the form */
+        padding: 15px; 
     }
     
     form div.input-box {
-        padding: 10px 0; /* Adjust padding for the input-box */
+        padding: 10px 0;
     }
     
     .input-box label {
-        padding: 5px 0; /* Adjust padding for the labels */
+        padding: 5px 0; 
     }
     
     .input-box input {
-        padding: 5px; /* Adjust padding for the inputs */
+        padding: 5px; 
     }
     
     .forgot-password {
-        align-self: auto; /* Reset alignment for the forgot-password link */
+        align-self: auto; 
     }
     
     button.btn {
-        margin: 5px 0; /* Adjust margin for the button */
+        margin: 5px 0; 
     }
 }

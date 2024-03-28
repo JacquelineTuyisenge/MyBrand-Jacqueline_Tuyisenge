@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signin page</title>
     <link rel="stylesheet" href="signin.css">
+    <link rel="icon" href="./images/jacky.svg">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -15,23 +16,24 @@
                 <h1>Registration Form</h1>
 
                 <div id="error" class="register-error"></div>
-
                 <div class="input-box">
                     <label for="Fname">Full Name:</label>
-                    <input type="text" id="Fname">
+                    <input type="text" name = "fullName" id="Fname">
                     <label for="email">Email:</label>
-                    <input type="email" id="email">
-                    <label for="password">Create Password:</label>
-                    <input type="password" id="password">
+                    <input type="email" name="email" id="email">
+                    <label for="password">password:</label>
+                    <input type="password" name="password" id="password">
                     <label for="confirmPassword">Confirm Password:</label>
-                    <input type="password" id="confirmPassword">
+                    <input type="password" name="confirmPassword" id="confirmPassword">
                 </div>
-                <button type="submit" class="btn"><a href="#">Register</a></button>
+                <button type="submit" class="btn">Register</a></button>
                 <div class="register-link">
                     <p>Already have an account? <a href="signin.html">Sign In</a></p>
                 </div>
             </form>
         </div>
+        <span class="loader"></span>
+        <div id="popup" class="popup hidden">Sign up is Successful!</div>
     </div>
     <script src="register.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
