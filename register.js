@@ -62,7 +62,7 @@
       // Display error messages if any
       if (messages.length > 0) {
         // e.preventDefault();
-        errorElement.innerText = messages.join(", ");
+        // errorElement.innerText = messages.join(", ");
       }
 
       // integration with backend
@@ -88,14 +88,23 @@
 
         if (response.ok) {
 
+          const responseData = await response.json();
             loader.style.display = "none";
-
             popup.classList.remove("hidden");
-
-            console.log(response.json());
+            popup.innerText = responseData.message;
+            
             setTimeout(() => {
-                window.location.href = "signin.html";
+              window.location.href = "signin.html";
             }, 5000);
+            
+        }else {
+          const errorData = await response.json();
+          loader.style.display = "none";
+          popup.classList.remove("hidden");
+          popup.innerText = errorData.message;
+          setTimeout(() => {
+            popup.classList.add("hidden");
+          }, 5000);
         }
         
       } catch (error) {

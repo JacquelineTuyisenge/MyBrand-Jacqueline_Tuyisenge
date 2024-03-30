@@ -144,36 +144,68 @@ window.onscroll = function() {
       hamburgerIcon.style.display = 'block';
   });
 
+  // fetch dblogs data from server
+//   const response = fetch('https://mybrand-be-ecx9.onrender.com/api/GET')
+//   .then(response => response.json())
+//   .then(data => {
+//     const blogsContainer = document.getElementById('blogsContainer');
+
+//     blogsContainer.innerHTML = data.map(blog => {
+//         return `
+//             <a href = "blog-post-${blog._id}.html" class="blog-card">
+//                 <img src="${blog.imageUrl}" alt="Blog-image">
+//                 <h4>${blog.title}</h4>
+//                 <div class="date-like-comments">
+//                     <div class="date">
+//                         <p>${blog.createdAt}</p>
+//                     </div>
+//                     <div class="like">
+//                         <i class='bx bx-heart'></i>
+//                         <p>${blog.blogLikes.length}</p>
+//                     </div>
+//                     <div class="comments">
+//                         <i class='bx bx-message-rounded-dots'></i>
+//                         <p>${blog.blogComments.length}</p>
+//                     </div>
+//                 </div>
+//                 <p>${blog.content}</p>
+//             </a>
+//         `;
+//     }).join('');
+//   })
+//   .catch(error => {
+//     console.error('Error loading blog posts:', error);
+//   });
+
+
+
     // addblog
-        const getAllArticles = JSON.parse(localStorage.getItem('myBlogs')) || [];
-        const blogsContainer = document.getElementById('blogsContainer');
+        // const getAllArticles = JSON.parse(localStorage.getItem('myBlogs')) || [];
+        // const blogsContainer = document.getElementById('blogsContainer');
 
-        blogsContainer.innerHTML = `${
-            getAllArticles.map((item, index) => {
-                return `
-                <a href="single-blog.html?title=${encodeURIComponent(item.blogTitle)}" class="blog-card">
-                    <img src="${item.blogImage}" alt="Blog-image">
-                    <h4>${item.blogTitle}</h4>
-                    <div class="date-like-comments">
-                        <div class="date">
-                            <p>${item.blogDate}</p>
-                        </div>
-                        <div class="like">
-                            <i class='bx bx-heart'></i>
-                            <p>${item.blogLike}</p>
-                        </div>
-                        <div class="comments">
-                            <i class='bx bx-message-rounded-dots'></i>
-                            <p>${item.blogComments}</p>
-                        </div>
-                    </div>
-                </a>
-                `
-            }).join('')
-        }`;
-
-
-
+        // blogsContainer.innerHTML = `${
+        //     getAllArticles.map((item, index) => {
+        //         return `
+        //         <a href="single-blog.html?title=${encodeURIComponent(item.blogTitle)}" class="blog-card">
+        //             <img src="${item.blogImage}" alt="Blog-image">
+        //             <h4>${item.blogTitle}</h4>
+        //             <div class="date-like-comments">
+        //                 <div class="date">
+        //                     <p>${item.blogDate}</p>
+        //                 </div>
+        //                 <div class="like">
+        //                     <i class='bx bx-heart'></i>
+        //                     <p>${item.blogLike}</p>
+        //                 </div>
+        //                 <div class="comments">
+        //                     <i class='bx bx-message-rounded-dots'></i>
+        //                     <p>${item.blogComments}</p>
+        //                 </div>
+        //             </div>
+        //         </a>
+        //         `
+        //     }).join('')
+        // }`;
     </script>
 </body>
 </html>

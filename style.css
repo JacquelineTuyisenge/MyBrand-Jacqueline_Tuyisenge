@@ -20,10 +20,6 @@
         margin: 0;
         padding: 15px;
         width: 100%;
-                /* width:auto;
-        color: white;
-        padding: 15px;
-        box-sizing: border-box; */
     }
     
     nav {
@@ -86,13 +82,14 @@
         background-color: transparent;
         border-radius: 0;
     }
-    
-    .signin a {
+
+    a.signin {
         color: white;
         text-decoration: none;
-        border: none;
-        border-radius: 0;
-        padding: 8px 15px;
+    }
+
+    a.signin:hover {
+        color: aquamarine;
     }
     
     .hamburger-icon,
