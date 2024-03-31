@@ -2,75 +2,208 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog-List</title>
-    <link rel="stylesheet" href="blog.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
+    <link rel="stylesheet" href="blog.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <nav class="logo">
-            <details>
-                <summary><img src="images/profile-dashbord.svg" alt="logo-image"></summary>
-                <a href="profile.html">View profile</a>
-            </details>
-            <h3>Jacqueline T.</h3>
-        </nav>
+      <nav class="logo">
+        <details>
+          <summary>
+            <img src="images/profile-dashbord.svg" alt="logo-image" />
+          </summary>
+          <a href="profile.html">View profile</a>
+        </details>
+        <h3>Jacqueline T.</h3>
+      </nav>
     </header>
     <div class="container">
-        <div class="sidebar">
-            <div class="sidebar-menu">
-                <ul>
-                    <li> <a href="dashboard.html"><img src="images/dasbboard.svg" alt="dashboard icon"><span>Dashboard</span></a></li>
-                    <li> <a href="articles.html"><img src="images/articlee.svg" alt="article-icon"><span>Articles</span></a></li>
-                    <li> <a href="messages.html"><img src="images/message.svg" alt="message-icon"><span>Messages</span></a></li>
-                    <li> <img src="images/logout.svg" alt="logout-icon"><a href="index.html"><span>Logout</span></a></li>
-                </ul>
-            </div>
+      <div class="sidebar">
+        <div class="sidebar-menu">
+          <ul>
+            <li>
+              <a href="dashboard.html"
+                ><img src="images/dasbboard.svg" alt="dashboard icon" /><span
+                  >Dashboard</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="articles.html"
+                ><img src="images/articlee.svg" alt="article-icon" /><span
+                  >Articles</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="messages.html"
+                ><img src="images/message.svg" alt="message-icon" /><span
+                  >Messages</span
+                ></a
+              >
+            </li>
+            <li>
+              <img src="images/logout.svg" alt="logout-icon" /><a
+                href="index.html"
+                ><span>Logout</span></a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
+      <span class="loader"></span>
+      <div id="popup" class="popup hidden">Blog retrieval is Successful!</div>
+      <!--blog-list table-->
+      <table class="blog-table">
+        <thead>
+          <tr class="header-1">
+            <th>Date</th>
+            <th>Author</th>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="blogTableBody">
+          <!-- where added blogs will be displayed -->
+          <tr>
+            <td class="date">date</td>
+            <td class="author">author</td>
+            <td>
+              <img
+                src="images/passion.svg"
+                alt="Sample Image"
+                class="message-image"
+              />
+            </td>
+            <td class="message-title">Passion Led Us Here</td>
+            <td class="message-description">
+              Becoming a software engineer has never been easier than now. All
+              it takes is a passion, and adaptability.
+            </td>
+            <td class="message-action">
+                <button class="edit-btn" onclick="updateBlog()">
+                  <box-icon name="edit"></box-icon>
+                </button>
+                <button class="delete-btn" onclick="deleteBlog(0)">
+                  <box-icon name="trash"></box-icon>
+                </button>
+              </td>          </tr>
+          <tr>
+            <td class="date">date</td>
+            <td class="author">author</td>
+            <td>
+              <img
+                src="images/passion.svg"
+                alt="Sample Image"
+                class="message-image"
+              />
+            </td>
+            <td class="message-title">Passion Led Us Here</td>
+            <td class="message-description">
+              Becoming a software engineer has never been easier than now. All
+              it takes is a passion, and adaptability.
+            </td>
+            <td class="message-action">
+              <button class="edit-btn" onclick="updateBlog()">
+                <box-icon name="edit"></box-icon>
+              </button>
+              <button class="delete-btn" onclick="deleteBlog(0)">
+                <box-icon name="trash"></box-icon>
+              </button>
+            </td>
+          </tr>
 
-        <!--blog-list table-->
-        <table class="blog-table">
-            <thead>
-                <tr class="header-1">
-                    <th>Image</th>
-                    <th>Title</th>
-                    <th>Description</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody id="blogTableBody">
-                <!-- where added blogs will be displayed -->
-                <tr>
-                    <td><img src="images/passion.svg" alt="Sample Image" class="message-image"></td>
-                    <td class="message-title">Passion Led Us Here</td>
-                    <td class="message-description">Becoming a software engineer has never been easier than now. All it takes is a passion, and adaptability.</td>
-                    <td class="message-action">
-                        <button class="edit-btn"><box-icon name='edit'></box-icon></button>
-                        <button class="delete-btn" onclick="deleteBlog(0)"><box-icon name='trash'></box-icon></button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><img src="images/passion.svg" alt="Sample Image" class="message-image"></td>
-                    <td class="message-title">Passion Led Us Here</td>
-                    <td class="message-description">Becoming a software engineer has never been easier than now. All it takes is a passion, and adaptability.</td>
-                    <td class="message-action">
-                        <button class="edit-btn" onclick="updateData()"><box-icon name='edit'></box-icon></button>
-                        <button class="delete-btn" onclick="deleteBlog(0)"><box-icon name='trash'></box-icon></button>
-                    </td>
-                </tr>
-               
-                <!-- Repeat similar structure for other messages -->
-            </tbody>
-        </table>
+          <!-- Repeat similar structure for other messages -->
+        </tbody>
+      </table>
     </div>
     <div class="addBlog-btn">
-        <button class="see-more-btn"><a href="articles.html">+ Blog</a></button>
+      <button class="see-more-btn"><a href="articles.html">+ Blog</a></button>
     </div>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <!-- <script src="articles.js"></script> -->
-</body>
+    <script>
+      const loader = document.querySelector(".loader");
+      const popup = document.getElementById("popup");
+
+      // fetch blogs from server and display them in table
+
+      async function fetchBlogs() {
+        loader.style.display = "block";
+        try {
+          const response = await fetch(
+            "https://mybrand-be-ecx9.onrender.com/api/blogs"
+          );
+          if (!response.ok) {
+            loader.style.display = "none";
+            popup.classList.remove("hidden");
+            popup.innerText = "Error fetching blogs";
+
+            setTimeout(() => {
+              popup.classList.add("hidden");
+            }, 5000);
+            throw new Error("Error fetching blogs");
+          }
+
+          const blogs = await response.json();
+          loader.style.display = "none";
+          popup.classList.remove("hidden");
+          popup.innerText = blogs.message;
+
+          setTimeout(() => {
+            popup.classList.add("hidden");
+          }, 5000);
+          return blogs.data;
+        } catch (error) {
+          console.error("Error fetching blogs", error);
+          return [];
+        }
+      }
+
+      //update blog table with fetched blogs
+
+      async function updateBlogTable() {
+       const blogTableBody = document.getElementById("blogTableBody");
+       blogTableBody.innerHTML = "";
+
+       const blogs = await fetchBlogs();
+       blogs.reverse().forEach((blog) => {
+           const row = document.createElement("tr");
+           row.innerHTML = `
+           <td>${new Date(blog.createdAt).toLocaleDateString()}</td>
+           <td>${blog.author}</td>
+           <td><img src="${blog.imageUrl}" alt="${blog.title}" class="message-image"></td>
+           <td>${truncateText(blog.title, 50)}</td>
+           <td>${truncateText(blog.content, 100)}</td>
+           <td class="message-action">
+               <button class="edit-btn" onclick="updateBlog(${blog.id})">
+                   <box-icon name="edit"></box-icon>
+               </button>
+               <button class="delete-btn" onclick="deleteBlog(${blog.id})">
+                   <box-icon name="trash"></box-icon>
+               </button>
+           </td>
+           `;
+           blogTableBody.appendChild(row);
+       });
+      }
+//truncateText
+function truncateText(text, maxLength) {
+    return text.length > maxLength ? text.slice(0, maxLength) + '...' : text;
+}
+
+  window.onload = updateBlogTable
+
+
+    </script>
+  </body>
 </html>

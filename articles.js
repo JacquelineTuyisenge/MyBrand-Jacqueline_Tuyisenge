@@ -62,16 +62,17 @@ formEl.addEventListener("submit", async function (event) {
 
     if (response.ok) {
       const responseData = await response.json();
-      console.log(responseData);
+     
 
       loader.style.display = "none";
       popup.classList.remove("hidden");
       popup.innerText = responseData.message;
 
+      console.log(responseData);
       
       setTimeout(() => {
-        window.location.href = "blog-cards.html";
-      }, 5000);
+        window.location.href = "index.html";
+      }, 10000);
     } else {
       const errorData = await response.json();
       console.log(errorData);
