@@ -175,15 +175,15 @@ async function addComment(blogId) {
             }
         );
 
-        if (!response.ok || !token) {
+        if (!response.ok) {
             loader.style.display = "none";
                 popup.classList.remove("hidden");
                 popup.innerText = 'please sign in to add a comment';
     
                 setTimeout(() => {
                     popup.classList.add("hidden");
-                }, 3000);
-                window.location.href = 'signin.html';
+                    window.location.href = 'signin.html';
+                }, 3000);  
         }
 
         const newCommentData = await response.json();

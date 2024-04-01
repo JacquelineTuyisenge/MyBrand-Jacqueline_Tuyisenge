@@ -148,16 +148,18 @@ button[type="button"]:hover {
   color: red;
 }
 
+
 /*loader*/
 
 .loader {
   position: fixed;
-  top: 80%;
+  top: 50%;
   left: 50%;
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
   z-index: 1000;
   transition: opacity 0.5s;
+  overflow: hidden;
 }
 
 .loader:before,
@@ -187,12 +189,14 @@ button[type="button"]:hover {
 /* Your existing CSS code */
 .popup {
   position: relative;
-  top: 30%;
-  left: 70%;
+  top: 20%;
+  left: 80%;
   transform: translate(-50%, -50%);
-  background-color: #fff;
+  background-color: #02a772;
+  color: #fff;
   padding: 20px;
-  border: 1px solid #000;
+  width: 50%;
+  border: 1px solid #2f67af;
   z-index: 1000;
   transition: opacity 0.5s;
 }
@@ -201,6 +205,7 @@ button[type="button"]:hover {
   opacity: 0;
   pointer-events: none;
 }
+
 
 /* Responsive styles */
 @media (max-width: 768px) {
