@@ -81,7 +81,7 @@ async function updateBlogSection() {
 function createBlogCard(blog) {
     const blogCard = document.createElement('a');
     blogCard.classList.add('blog-card');
-    blogCard.href = `blog-post-${blog._id}.html`;
+    blogCard.href = `single-blog.html?id=${blog._id}`;
     blogCard.innerHTML = `
         <img src="${blog.imageUrl}" alt="${blog.title}">
         <h4>${blog.title}</h4>
@@ -102,7 +102,31 @@ function createBlogCard(blog) {
     return blogCard;
 }
 
-window.onload = updateBlogSection();
+// function to handle clicking on a blog card
+
+function handleBlogCardClick(blogId) {
+    window.location.href = `singleBlog.html?id=${blogId}`;
+  }
+
+  // add event listener to the blog cards
+
+  async function cardsEventListener() {
+     const blogsContainer = document.getElementById("blogsContainer");
+     const blogs = await fetchLatestBlogs();
+
+     blogs.reverse().forEach((blog) => {
+       const blogCard = createBlogCard(blog);
+       blogCard.addEventListener("click", () => {
+        handleBlogCardClick(blog._id);
+       });
+       blogsContainer.appendChild(blogCard);
+     });
+  }
+
+  window.onload = function () {
+    updateBlogSection();
+    cardsEventListener();
+  };
 
 moreBlogsBtn.addEventListener('click', () => {
     window.location.href = 'blog-cards.html';

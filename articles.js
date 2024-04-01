@@ -88,22 +88,4 @@ formEl.addEventListener("submit", async function (event) {
     console.log(error);
     loader.style.display = "none";
   }
-
-  // const myBlogArray = JSON.parse(localStorage.getItem('myBlogs')) || [];
-  // const reader = new FileReader();
-  // reader.onload = () => {
-  //     const articleImage = reader.result;
-  //     const articleContents = {
-  //         blogImage: articleImage,
-  //         blogTitle: title,
-  //         blogDate: date,
-  //         blogLike: 0,
-  //         blogComments: 0,
-  //         blogDescription: description
-  //     };
-  //     myBlogArray.unshift(articleContents);
-  //     localStorage.setItem('myBlogs', JSON.stringify(myBlogArray));
-  //     window.location.href='blog-cards.html';
-  // }
-  // reader.readAsDataURL(image);
 });

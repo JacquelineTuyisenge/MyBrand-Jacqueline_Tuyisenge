@@ -208,7 +208,7 @@
       function createBlogCard(blog) {
         const blogCard = document.createElement("a");
         blogCard.classList.add("blog-card");
-        blogCard.href = `blog-post-${blog._id}.html`;
+        blogCard.href = `single-blog.html?id=${blog._id}`;
         blogCard.innerHTML = `
         <img src="${blog.imageUrl}" alt="${blog.title}">
         <h4>${blog.title}</h4>
@@ -229,7 +229,31 @@
         return blogCard;
       }
 
-      window.onload = displayBlogs();
+      // function to handle clicking on a blog card
+
+    function handleBlogCardClick(blogId) {
+        window.location.href = `singleBlog.html?id=${blogId}`;
+      }
+
+      // add event listener to the blog cards
+
+      async function cardsEventListener() {
+         const blogsContainer = document.getElementById("blogsContainer");
+         const blogs = await fetchAllBlogs();
+
+         blogs.reverse().forEach((blog) => {
+           const blogCard = createBlogCard(blog);
+           blogCard.addEventListener("click", () => {
+            handleBlogCardClick(blog._id);
+           });
+           blogsContainer.appendChild(blogCard);
+         });
+      }
+
+      window.onload = function () {
+        displayBlogs();
+        cardsEventListener();
+      };
     </script>
   </body>
 </html>

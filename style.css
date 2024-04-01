@@ -563,13 +563,14 @@ div.portfolio-cards .card .card-image.card-4{
   
   /* Your existing CSS code */
   .popup {
-    position: relative;
-    top: 30%;
-    left: 50%;
+    position: fixed;
+    top: 20%;
+    left: 80%;
     transform: translate(-50%, -50%);
     background-color: #02a772;
     color: #fff;
     padding: 20px;
+    width: 50%;
     border: 1px solid #2f67af;
     z-index: 1000;
     transition: opacity 0.5s;
@@ -579,7 +580,6 @@ div.portfolio-cards .card .card-image.card-4{
     opacity: 0;
     pointer-events: none;
   }
-
 /*blog page*/
 .blog-page{
     padding: 70px 0px;

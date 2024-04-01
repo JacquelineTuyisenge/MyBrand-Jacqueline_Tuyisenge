@@ -36,10 +36,12 @@
             </div>
         </nav>
     </header>
+    <span class="loader"></span>
+        <div id="popup" class="popup hidden">Blog retrieval is Successful!</div>
 
     <main>
         <!--single blog section-->
-        <section class="blog" id="singleBlogContainer">
+        <section class="blog">
             <div class="blog-title">
                 <h3>From Student to Junior Software Engineer</h3>
             </div>
@@ -55,7 +57,6 @@
                 <img src="images/passion.svg" alt="Blog Post 1">
             </div>
             <div class="blog-content">
-                <h4></h4>
                 <p>Embarking on the journey from a dedicated student to a Junior Software Engineer has been an exhilarating adventure. Throughout my academic years, I eagerly absorbed the principles and theories of computer science, fostering a deep passion for programming.</p>
                 <p>As I transitioned from classrooms to coding challenges, the theoretical knowledge gained momentum, transforming into practical skills that laid the foundation for my professional career. The thrill of translating abstract concepts into tangible solutions fueled my determination to embrace the dynamic realm of software engineering.</p>
                 <br><br>
@@ -64,7 +65,7 @@
             </div>
         </section>
         <!--comment section-->
-        <section class="comments" id="commentsSection">
+        <section class="comments" id="commentSection">
             <div class="comment-like">
                 <div class="comment-nbr">
                     <p>20 comments</p>
@@ -75,28 +76,60 @@
                 </div>
             </div>
             <div class="add-comment">
-                <div class="commenter">
-                    <img src="images/jacky.svg" alt="commenter-profile">
-                    <p>Jamie</p>
-                </div>
                 <div class="comment-place">
-                    <textarea id="commentText" type="text" placeholder="Add a comment" rows="1" cols="40"></textarea>
+                    <textarea type="text" placeholder="Add a comment" rows="1" cols="40"></textarea>
                 </div>
-                <div class="error" id="error"></div>
                 <div class="add-comment-btn">
-                    <button onclick="addComment()">Add comment</a></button>
+                    <button>Add comment</button>
+                </div>
+            </div>
+            <div class="comment">
+                <div class="profile-comment">
+                    <div>
+                        <p id="comment-author">Amie</p>
+                        <small>Asantenti sana kwa hiyo content, Keep Giving us more</small>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="comment">
+                <div class="profile-comment">
+                    <div>
+                        <p id="comment-author">Jane</p>
+                        <small>Asantenti sana kwa hiyo content, Keep Giving us more</small>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="comment">
+                <div class="profile-comment">
+                    <div>
+                        <p id="comment-author">Anne</p>
+                        <small>Asantenti sana kwa hiyo content, Keep Giving us more</small>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="comment">
+                <div class="profile-comment">
+                    <div>
+                        <p id="comment-author">Safari</p>
+                        <small>Asantenti sana kwa hiyo content, Keep Giving us more</small>
+                        <br><br>
+                    </div>
                 </div>
             </div>
             <hr>
             <div class="see-comment-btn">
                 <button><a href="#">See all comments</a></button>
             </div>
-            <!--comments-->
         </section>
     </main>
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="singleBlog.js"></script>
-
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script>
     // js for resposive navbar
         const hamburgerIcon = document.getElementById('hamburger');

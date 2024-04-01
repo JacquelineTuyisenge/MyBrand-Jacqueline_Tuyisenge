@@ -111,6 +111,63 @@ nav {
 }
 /* blog page */
 
+/*loader*/
+
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    z-index: 1000;
+    transition: opacity 0.5s;
+    overflow: hidden;
+  }
+  
+  .loader:before,
+  .loader:after {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    inset: 0;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3) inset;
+  }
+  .loader:after {
+    box-shadow: 0 5px 0 #1f50b1 inset;
+    animation: rotate 2s linear infinite;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /*popup*/
+  
+  /* Your existing CSS code */
+  .popup {
+    position: relative;
+    top: 20%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    background-color: #02a772;
+    color: #fff;
+    padding: 20px;
+    width: 50%;
+    border: 1px solid #2f67af;
+    z-index: 1000;
+    transition: opacity 0.5s;
+  }
+  
+  .hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
 .blog{
     margin: 100px;
     padding: 50px;
@@ -169,9 +226,14 @@ nav {
 .comment-like p{
     font-size: 16px;
 }
-.comment-like i{
+
+.bx.bxs-heart.liked {
     cursor: pointer;
-    color: white;
+    color: red; 
+}
+.bx.bxs-heart {
+    cursor: pointer;
+    color: white; 
 }
 .like-nbr{
     display: flex;
