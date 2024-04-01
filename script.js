@@ -90,7 +90,7 @@ function createBlogCard(blog) {
                 <p>${new Date(blog.createdAt).toLocaleDateString()}</p>
             </div>
             <div class="like">
-                <i class='bx bx-heart'></i>
+                <i class='bx bxs-heart'></i>
                 <p>${blog.blogLikes.length}</p>
             </div>
             <div class="comments">

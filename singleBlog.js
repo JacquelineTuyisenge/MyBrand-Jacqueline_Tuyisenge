@@ -150,7 +150,7 @@ async function populateBlog(id) {
 }
 
 // function to add a new comment
-
+const token = localStorage.getItem("token");
 async function addComment(blogId) {
     loader.style.display = "block";
     try{
@@ -161,13 +161,13 @@ async function addComment(blogId) {
             popup.innerText = "Comment cannot be empty";
             return;
         }
-
+        
         const response = await fetch(
             `https://mybrand-be-ecx9.onrender.com/api/blogs/${blogId}/comments`,{
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    "Authorization": `Bearer ${localStorage.getItem("token")}`,
+                    "Authorization": `Bearer ${token}`,
                 },
                 body: JSON.stringify({
                     comment: commentContent,
@@ -175,19 +175,27 @@ async function addComment(blogId) {
             }
         );
 
-        if (!response.ok) {
+        if (!response.ok || !token) {
             loader.style.display = "none";
-            throw new Error("Error adding comment");
+                popup.classList.remove("hidden");
+                popup.innerText = 'please sign in to add a comment';
+    
+                setTimeout(() => {
+                    popup.classList.add("hidden");
+                }, 3000);
+                window.location.href = 'signin.html';
         }
 
         const newCommentData = await response.json();
         loader.style.display = "none";
          popup.classList.remove("hidden");
         popup.innerText = newCommentData.message;
+        console.log(newCommentData.message);
 
         setTimeout(() => {
                 popup.classList.add("hidden");
             }, 5000);
+            window.location.reload();
             console.log(newCommentData);
 
         const CommentContainer = document.querySelector(".comments");
@@ -254,7 +262,7 @@ async function toggleLike(blogId, icon) {
         popup.innerText = data.message;
         setTimeout(() => {
             popup.classList.add("hidden");
-        }, 2000);
+        }, 5000);
 
         const likeCountElement = document.getElementById("like-count");
         if (!likeCountElement) {
