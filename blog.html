@@ -188,9 +188,9 @@
            <td>${truncateText(blog.title, 50)}</td>
            <td>${truncateText(blog.content, 100)}</td>
            <td class="message-action">
-               <button class="edit-btn" onclick="updateBlog('${blog._id}')">
+               <a href="updateArticle.html?id=${blog._id}" class="edit-btn">
                    <box-icon name="edit"></box-icon>
-               </button>
+               </a>
                <button class="delete-btn" onclick="deleteBlog('${blog._id}')">
                    <box-icon name="trash"></box-icon>
                </button>
@@ -249,9 +249,6 @@
 
       //update blog inside where blog are created
 
-      function updateBlog(blogId) {
-        window.location.href = `articles.html?id=${blogId}`;
-      }
 
       window.onload = updateBlogTable;
     </script>
