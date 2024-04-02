@@ -79,7 +79,7 @@ window.onload = async() => {
   
       loader.style.display = "none";
       popup.classList.remove("hidden");
-      popup.innerText = responseData.message;
+      popup.innerText = "Blog updated successfully";
   
       setTimeout(() => {
         // window.location.href = "index.html";
