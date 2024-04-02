@@ -161,7 +161,7 @@ async function addComment(blogId) {
 
     if(!token){
       popup.classList.remove("hidden");
-      popup.innerText = "please sign in to like a blog";
+      popup.innerText = "please sign in to comment on a blog";
 
       setTimeout(() => {
         popup.classList.add("hidden");

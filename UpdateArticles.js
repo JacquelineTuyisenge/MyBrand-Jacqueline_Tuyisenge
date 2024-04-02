@@ -82,7 +82,7 @@ window.onload = async() => {
       popup.innerText = "Blog updated successfully";
   
       setTimeout(() => {
-        // window.location.href = "index.html";
+        window.location.href = "index.html";
       }, 10000);
      } else {
       const errorData = await response.json();
