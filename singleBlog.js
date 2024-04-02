@@ -166,7 +166,7 @@ async function addComment(blogId) {
       setTimeout(() => {
         popup.classList.add("hidden");
         window.location.href = "signin.html";
-      })
+      }, 5000);
       return;
     }
     const commentContent = document
@@ -262,7 +262,7 @@ async function toggleLike(blogId, icon) {
       setTimeout(() => {
         popup.classList.add("hidden");
         window.location.href = "signin.html";
-      })
+      }, 5000);
       return;
     }
 
