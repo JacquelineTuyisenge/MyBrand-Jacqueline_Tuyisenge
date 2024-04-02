@@ -524,30 +524,43 @@ div.portfolio-cards .card .card-image.card-4{
 }
 
 
-/*loader*/
+ /*loader*/
 
-.loader {
+ .loader {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 100px;
-    height: 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: 1000;
-    transition: opacity 0.5s;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); 
+  }
+
+.loader:before,
+.loader:after {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  border: 2px solid #fff; 
+}
+
+.loader:before {
+    border-top: 2px solid transparent; 
+    border-bottom: 2px solid transparent;
+    width: 30px;
+    height: 30px;
+    animation: rotate 1s linear infinite;
   }
   
-  .loader:before,
   .loader:after {
-    content: "";
-    border-radius: 50%;
-    position: absolute;
-    inset: 0;
-    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3) inset;
-  }
-  .loader:after {
-    box-shadow: 0 5px 0 #1f50b1 inset;
-    animation: rotate 2s linear infinite;
+    border-left: 2px solid transparent; 
+    border-right: 2px solid transparent; 
+    width: 50px;
+    height: 50px;
+    animation: rotate 1s linear infinite reverse; 
   }
   
   @keyframes rotate {
@@ -561,25 +574,30 @@ div.portfolio-cards .card .card-image.card-4{
   
   /*popup*/
   
-  /* Your existing CSS code */
   .popup {
     position: fixed;
-    top: 20%;
-    left: 80%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     background-color: #02a772;
     color: #fff;
     padding: 20px;
-    width: 50%;
+    max-width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: 60px;
     border: 1px solid #2f67af;
     z-index: 1000;
     transition: opacity 0.5s;
+    text-align: center;
   }
   
   .hidden {
     opacity: 0;
     pointer-events: none;
   }
+
+  
 /*blog page*/
 .blog-page{
     padding: 70px 0px;
@@ -819,7 +837,7 @@ div.work-together{
 #email{
     color:#55C4A1;
 }
-.contact .feedback{
+.feedback{
     flex: 2;
     width: 60%;
     text-align: center;
@@ -1137,23 +1155,85 @@ footer .footer-signin a:hover{
         height: 300px;
         background-size: cover;
     }
+
+    /*services*/
+
+    .services{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    div.work-together{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #00274E;
+        color: white;
+        text-align: center;
+        padding: 50px 0px;
+        
+    }
+    .work-together-title{
+        font-size: 30px;
+        font-weight: 700;
+        padding: 20px 0px;
+        line-height: 24px;
+        letter-spacing: 1.5px;
+    }
+    .work-together-btn{
+        padding: 8px 10px;
+        background-color: #55C4A1;
+        border: none;
+        border-radius: 3px;
+    }
+    .work-together-btn:hover{
+        transform: scale(1.03);
+        cursor: pointer;
+    }
+    .work-together-btn a{
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+    }
+    .work-details{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 20px;
+        padding: 20px;
+        width: 100%;
+    }
+    .work-details .what-i-do{
+        margin: 5px;
+    }
+
     /* contact us*/
 
-    .my-adress {
-        max-width: 100%; 
-        border-radius: 0; 
-    }
-
-    .my-adress form div {
-        width: 300px;
-        padding: 10px;
-        flex-direction: column; 
-    }
-
-    .my-adress form div p {
-        flex: none; 
+    .contact {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 20px;
+        padding: 20px;
         width: 100%; 
-        font-size: 12px; 
+    }
+    .my-adress{
+        margin: 20px;
+        width: 100%;
+    }
+    .feedback{
+        margin: 20px 30px;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background-color: #00274E;
+        border-radius: 8px;
+        padding: 30px;
     }
     
     /* footer */
@@ -1261,6 +1341,99 @@ footer .footer-signin a:hover{
         width: 100%;
         padding: 2%;
     }
+
+    /* contact section */
+.contact{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 50px;
+    padding: 100px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #e0e4e8;
+}
+
+.my-adress{
+    width: auto;
+    border: 2px solid #00274E;
+    border-radius: 20px;
+    padding: 20px;
+}
+.my-adress h3{
+    text-align: center;
+}
+.my-infos div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #00274E;
+    margin: 10px;
+    border-radius: 10px;
+}
+.my-infos div p{
+    font-size: 13px;
+}
+.my-infos div:hover{
+    background-color: #00274e6c;
+    color: white;
+}
+#location{
+    color:#55C4A1;
+}
+#phone{
+    color:#55C4A1;
+}
+#email{
+    color:#55C4A1;
+}
+.feedback{
+    width: auto;
+    text-align: center;
+    background-color: #00274E;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+}
+.contact .feedback h3{
+    color:#eef0f3;
+    padding: 40px 0px;
+}
+.contact .feedback label{
+    color: white;
+}
+.contact .feedback input, textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 10px;
+}
+
+form input[type="text"],
+input[type="email"],
+textarea {
+  color: black;
+}
+.feedback button{
+    background-color: #55C4A1;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 10px;
+}
+.feedback button:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+}
+.feedback button a{
+    text-decoration: none;
+    color: #00274E;
+    font-size: 18px;
+}
+
+
   }
   @media  screen and (min-width: 1024px) {
     /* Styles for screens 1024 pixels wide and above (typically desktops) */

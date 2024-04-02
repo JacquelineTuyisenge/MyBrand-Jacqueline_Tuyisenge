@@ -58,7 +58,7 @@
                 <p>20th may, 2023</p>
               </div>
               <div class="like">
-                <i class='bx bxs-heart'></i>
+                <i class="bx bxs-heart"></i>
                 <p>20k</p>
               </div>
               <div class="comments">
@@ -79,7 +79,7 @@
                 <p>20th may, 2023</p>
               </div>
               <div class="like">
-                <i class='bx bxs-heart'></i>
+                <i class="bx bxs-heart"></i>
                 <p>20k</p>
               </div>
               <div class="comments">
@@ -100,7 +100,7 @@
                 <p>20th may, 2023</p>
               </div>
               <div class="like">
-                <i class='bx bxs-heart'></i>
+                <i class="bx bxs-heart"></i>
                 <p>20k</p>
               </div>
               <div class="comments">
@@ -231,28 +231,28 @@
 
       // function to handle clicking on a blog card
 
-    function handleBlogCardClick(blogId) {
+      function handleBlogCardClick(blogId) {
         window.location.href = `singleBlog.html?id=${blogId}`;
       }
 
       // add event listener to the blog cards
 
-      async function cardsEventListener() {
-         const blogsContainer = document.getElementById("blogsContainer");
-         const blogs = await fetchAllBlogs();
+      // async function cardsEventListener() {
+      //   const blogsContainer = document.getElementById("blogsContainer");
+      //   const blogs = await fetchAllBlogs();
 
-         blogs.reverse().forEach((blog) => {
-           const blogCard = createBlogCard(blog);
-           blogCard.addEventListener("click", () => {
-            handleBlogCardClick(blog._id);
-           });
-           blogsContainer.appendChild(blogCard);
-         });
-      }
+      //   blogs.reverse().forEach((blog) => {
+      //     const blogCard = createBlogCard(blog);
+      //     blogCard.addEventListener("click", () => {
+      //       handleBlogCardClick(blog._id);
+      //     });
+      //     blogsContainer.appendChild(blogCard);
+      //   });
+      // }
 
-      window.onload = function () {
-        displayBlogs();
-        cardsEventListener();
+      window.onload = async function () {
+        await displayBlogs();
+        // cardsEventListener();
       };
     </script>
   </body>
