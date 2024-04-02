@@ -188,9 +188,10 @@ async function addComment(blogId) {
       popup.innerText = "please sign in to add a comment";
 
       setTimeout(() => {
-        popup.classList.add("hidden");
+        window.location.href = "signin.html";
       }, 3000);
-      window.location.href = "signin.html";
+      popup.classList.add("hidden");
+      return;
     }
 
     const newCommentData = await response.json();
@@ -202,6 +203,7 @@ async function addComment(blogId) {
     setTimeout(() => {
       popup.classList.add("hidden");
     }, 5000);
+
     window.location.reload();
     console.log(newCommentData);
 
@@ -241,7 +243,13 @@ async function addComment(blogId) {
 async function toggleLike(blogId, icon) {
   try {
     const token = localStorage.getItem("token");
-    console.log("Token:", token);
+
+    if(!token){
+      popup.classList.remove("hidden");
+      popup.innerText = "please sign in to like a blog";
+      window.location.href = "signin.html";
+      return;
+    }
 
     const response = await fetch(
       `https://mybrand-be-ecx9.onrender.com/api/blogs/${blogId}/likes`,
