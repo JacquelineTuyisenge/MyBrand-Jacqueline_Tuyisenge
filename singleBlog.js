@@ -158,6 +158,17 @@ const token = localStorage.getItem("token");
 async function addComment(blogId) {
   loader.style.display = "block";
   try {
+
+    if(!token){
+      popup.classList.remove("hidden");
+      popup.innerText = "please sign in to like a blog";
+
+      setTimeout(() => {
+        popup.classList.add("hidden");
+        window.location.href = "signin.html";
+      })
+      return;
+    }
     const commentContent = document
       .querySelector(".comment-place textarea")
       .value.trim();
@@ -247,7 +258,11 @@ async function toggleLike(blogId, icon) {
     if(!token){
       popup.classList.remove("hidden");
       popup.innerText = "please sign in to like a blog";
-      window.location.href = "signin.html";
+
+      setTimeout(() => {
+        popup.classList.add("hidden");
+        window.location.href = "signin.html";
+      })
       return;
     }
 

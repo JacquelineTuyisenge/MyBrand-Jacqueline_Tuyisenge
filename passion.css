@@ -111,30 +111,44 @@ nav {
 }
 /* blog page */
 
-/*loader*/
 
-.loader {
+ /*loader*/
+
+ .loader {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 100px;
-    height: 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: 1000;
-    transition: opacity 0.5s;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); 
+  }
+
+.loader:before,
+.loader:after {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  border: 2px solid #fff; 
+}
+
+.loader:before {
+    border-top: 2px solid transparent; 
+    border-bottom: 2px solid transparent;
+    width: 30px;
+    height: 30px;
+    animation: rotate 1s linear infinite;
   }
   
-  .loader:before,
   .loader:after {
-    content: "";
-    border-radius: 50%;
-    position: absolute;
-    inset: 0;
-    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3) inset;
-  }
-  .loader:after {
-    box-shadow: 0 5px 0 #1f50b1 inset;
-    animation: rotate 2s linear infinite;
+    border-left: 2px solid transparent; 
+    border-right: 2px solid transparent; 
+    width: 50px;
+    height: 50px;
+    animation: rotate 1s linear infinite reverse; 
   }
   
   @keyframes rotate {
@@ -148,19 +162,22 @@ nav {
   
   /*popup*/
   
-  /* Your existing CSS code */
   .popup {
-    position: relative;
-    top: 20%;
-    left: 80%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     background-color: #02a772;
     color: #fff;
     padding: 20px;
-    width: 50%;
+    max-width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: 60px;
     border: 1px solid #2f67af;
     z-index: 1000;
     transition: opacity 0.5s;
+    text-align: center;
   }
   
   .hidden {
