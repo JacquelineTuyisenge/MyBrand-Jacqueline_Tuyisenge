@@ -35,7 +35,7 @@ function AllBlogsReact() {
       {blogs.length > 0 ? (
         blogs.map((blog) => {
           return (
-            <a href="blog-post-1.html" class="blog-card">
+            <a href={`single-blog.html?id=${blog._id}`} class="blog-card">
               <img src={blog.imageUrl} alt="Blog-image" />
               <h4>{blog.title}</h4>
               <div class="date-like-comments">
