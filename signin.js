@@ -1,9 +1,7 @@
 (function () {
     "use strict";
   
-      // register validation
-  
-      const fullName = document.getElementById("Fname");
+    
       const email = document.getElementById("email");
       const password = document.getElementById("password");
       const signInForm = document.getElementById("signin-form");
@@ -19,10 +17,6 @@
         loader.style.display = "flex";
         //errors
         let messages = [];
-  
-        if (fullName.value.trim() === "" || fullName.value == null) {
-          messages.push("Full Name is required");
-        }
   
         if (email.value.trim() === "") {
           messages.push("Email is required");
@@ -59,7 +53,6 @@
         // integration with backend
   
         const data = {
-          fullName: fullName.value,
           email: email.value,
           password: password.value,
         };
