@@ -14,6 +14,12 @@ function AllBlogsReact() {
         const blogsData = responseResult.data;
 
         setBlogs(blogsData);
+        const popup = document.getElementById("popup");
+        popup.innerText = responseResult.message;
+        popup.classList.remove("hidden");
+        setTimeout(() => {
+          popup.classList.add("hidden");
+        }, 5000);
       } catch (error) {
         console.log(error);
       } finally {
@@ -21,7 +27,7 @@ function AllBlogsReact() {
       }
     }
     fetchData();
-  }, [blogs]);
+  }, []);
   
   if(loading){
     document.getElementById('loader').style.display = 'flex';

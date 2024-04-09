@@ -11,6 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script defer src="latestBlogsReact.js" type="text/babel"></script>
 </head>
 <body>
     <header>
@@ -216,7 +221,7 @@
                 </div>
                 <span class="loader"></span>
                 <div id="popup" class="popup hidden">Blog retrieval is Successful!</div>
-                <div class="blog-cards">
+                <div class="blog-cards" id="blogsContainer">
                     <a href="blog-post-1.html" class="blog-card">
                         <img src="images/student-to-swe.svg" alt="Blog Post 1">
                         <h4>From student to Junior software Engineer</h4>
